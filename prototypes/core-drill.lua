@@ -54,232 +54,52 @@ data:extend(
     },
     energy_usage = "90kW",
   
-	
-	
-	animations =
+	animation =
     {
-      north =
+      layers =
       {
-        priority = "extra-high",
-        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-N.png",
-        line_length = 8,
-        width = 98,
-        height = 113,
-        frame_count = 64,
-        animation_speed = 0.5,
-        direction_count = 1,
-        shift = util.by_pixel(0, -8.5),
-        run_mode = "forward-then-backward",
-        hr_version = {
-          priority = "extra-high",
-          filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N.png",
+        {
+          filename = "__VexMod__/graphics/entity/core-drill-1.png",
+          priority = "high",
+          width = 108,
+          height = 110,
+          frame_count = 32,
           line_length = 8,
-          width = 196,
-          height = 226,
-          frame_count = 64,
-          animation_speed = 0.5,
-          direction_count = 1,
-          shift = util.by_pixel(0, -8),
-          run_mode = "forward-then-backward",
-          scale = 0.5
-        }
+          shift = util.by_pixel(0, 4),
+          hr_version = {
+            filename = "__VexMod__/graphics/entity/hr-core-drill-1.png",
+            priority = "high",
+            width = 214,
+            height = 218,
+            frame_count = 32,
+            line_length = 8,
+            shift = util.by_pixel(0, 4),
+            scale = 0.5
+          }
+        },
+        {
+          filename = "__VexMod__/graphics/entity/core-drill-1-shadow.png",
+          priority = "high",
+          width = 98,
+          height = 82,
+          frame_count = 32,
+          line_length = 8,
+          draw_as_shadow = true,
+          shift = util.by_pixel(12, 5),
+          hr_version = {
+            filename = "__VexMod__/graphics/entity/hr-core-drill-1-shadow.png",
+            priority = "high",
+            width = 196,
+            height = 163,
+            frame_count = 32,
+            line_length = 8,
+            draw_as_shadow = true,
+            shift = util.by_pixel(12, 4.75),
+            scale = 0.5
+          }
+        },
       },
-      east =
-      {
-        priority = "extra-high",
-        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-E.png",
-        line_length = 8,
-        width = 105,
-        height = 98,
-        frame_count = 64,
-        animation_speed = 0.5,
-        direction_count = 1,
-        shift = util.by_pixel(3.5, -1),
-        run_mode = "forward-then-backward",
-        hr_version = {
-          priority = "extra-high",
-          filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E.png",
-          line_length = 8,
-          width = 211,
-          height = 197,
-          frame_count = 64,
-          animation_speed = 0.5,
-          direction_count = 1,
-          shift = util.by_pixel(3.75, -1.25),
-          run_mode = "forward-then-backward",      
-          scale = 0.5
-        }
-      },
-      south =
-      {
-        priority = "extra-high",
-        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-S.png",
-        line_length = 8,
-        width = 98,
-        height = 109,
-        frame_count = 64,
-        animation_speed = 0.5,
-        direction_count = 1,
-        shift = util.by_pixel(0, -1.5),
-        run_mode = "forward-then-backward",
-        hr_version = {
-          priority = "extra-high",
-          filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S.png",
-          line_length = 8,
-          width = 196,
-          height = 219,
-          frame_count = 64,
-          animation_speed = 0.5,
-          direction_count = 1,
-          shift = util.by_pixel(0, -1.25),
-          run_mode = "forward-then-backward",
-          scale = 0.5
-        }
-      },
-      west =
-      {
-        priority = "extra-high",
-        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-W.png",
-        line_length = 8,
-        width = 105,
-        height = 98,
-        frame_count = 64,
-        animation_speed = 0.5,
-        direction_count = 1,
-        shift = util.by_pixel(-3.5, -1),
-        run_mode = "forward-then-backward",
-        hr_version = {
-          priority = "extra-high",
-          filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W.png",
-          line_length = 8,
-          width = 211,
-          height = 197,
-          frame_count = 64,
-          animation_speed = 0.5,
-          direction_count = 1,
-          shift = util.by_pixel(-3.75, -0.75),
-          run_mode = "forward-then-backward",
-          scale = 0.5
-        }
-      }
     },
-    shadow_animations =
-    {
-      north =
-      {
-        priority = "extra-high",
-        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-N-drill-shadow.png",
-        flags = { "shadow" },
-        line_length = 8,
-        width = 101,
-        height = 111,
-        frame_count = 64,
-        animation_speed = 0.5,
-        direction_count = 1,
-        shift = util.by_pixel(1.5, -7.5),
-        run_mode = "forward-then-backward",
-        hr_version = {
-          priority = "extra-high",
-          filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-drill-shadow.png",
-          flags = { "shadow" },
-          line_length = 8,
-          width = 201,
-          height = 223,
-          frame_count = 64,
-          animation_speed = 0.5,
-          direction_count = 1,
-          shift = util.by_pixel(1.25, -7.25),
-          run_mode = "forward-then-backward",
-          scale = 0.5
-        }
-      },
-      east =
-      {
-        priority = "extra-high",
-        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-E-drill-shadow.png",
-        flags = { "shadow" },
-        line_length = 8,
-        width = 110,
-        height = 97,
-        frame_count = 64,
-        animation_speed = 0.5,
-        direction_count = 1,
-        shift = util.by_pixel(6, -0.5),
-        run_mode = "forward-then-backward",
-        hr_version = {
-          priority = "extra-high",
-          filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-drill-shadow.png",
-          flags = { "shadow" },
-          line_length = 8,
-          width = 221,
-          height = 195,
-          frame_count = 64,
-          animation_speed = 0.5,
-          direction_count = 1,
-          shift = util.by_pixel(6.25, -0.25),
-          run_mode = "forward-then-backward",
-          scale = 0.5
-        }
-      },
-      south =
-      {
-        priority = "extra-high",
-        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-S-drill-shadow.png",
-        flags = { "shadow" },
-        line_length = 8,
-        width = 100,
-        height = 103,
-        frame_count = 64,
-        animation_speed = 0.5,
-        direction_count = 1,
-        shift = util.by_pixel(1, 2.5),
-        run_mode = "forward-then-backward",
-        hr_version = {
-          priority = "extra-high",
-          filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-drill-shadow.png",
-          flags = { "shadow" },
-          line_length = 8,
-          width = 200,
-          height = 206,
-          frame_count = 64,
-          animation_speed = 0.5,
-          direction_count = 1,
-          shift = util.by_pixel(1, 2.5),
-          run_mode = "forward-then-backward",
-          scale = 0.5
-        }
-      },
-      west =
-      {
-        priority = "extra-high",
-        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-W-drill-shadow.png",
-        flags = { "shadow" },
-        line_length = 8,
-        width = 114,
-        height = 97,
-        frame_count = 64,
-        animation_speed = 0.5,
-        direction_count = 1,
-        shift = util.by_pixel(1, -0.5),
-        run_mode = "forward-then-backward",
-        hr_version = {
-          priority = "extra-high",
-          filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-drill-shadow.png",
-          flags = { "shadow" },
-          line_length = 8,
-          width = 229,
-          height = 195,
-          frame_count = 64,
-          animation_speed = 0.5,
-          direction_count = 1,
-          shift = util.by_pixel(1.25, -0.25),
-          run_mode = "forward-then-backward",
-          scale = 0.5
-        }
-      }	  
-    },
-	
-	
-	
+
   }
 })
