@@ -10,17 +10,29 @@ data:extend({
 	
 	{
 		type = "recipe",
-		name = "core-drilling-1",
-		category = "core-drilling",
+		name = "iron-core-drilling-1",
+		category = "core-drilling-1",
 		enabled = true,
 		energy_required = 5,
 		ingredients =
 		{ 
 		},
-		result = "processing-unit",
-		icon = "__base__/graphics/icons/fluid/advanced-oil-processing.png",
-		subgroup = "fluid-recipes",
-		order = "a[oil-processing]-b[advanced-oil-processing]"
+		results =
+		{
+		  {
+			name = "coal",
+			probability = 0.1,
+			amount = 12
+		  },
+		  {
+			name = "iron-ore",
+			probability = 0.7,
+			amount = 36
+		  }
+		},
+		icon = "__base__/graphics/icons/iron-ore.png",
+		subgroup = "production-machine",
+		--order = "a[oil-processing]-b[advanced-oil-processing]"
 	},
   
 });

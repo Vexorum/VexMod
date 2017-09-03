@@ -2,6 +2,6 @@ data:extend(
   {
     {
       type = "recipe-category",
-      name = "core-drilling"
+      name = "core-drilling-1"
     },
   })

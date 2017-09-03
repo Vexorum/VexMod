@@ -41,8 +41,8 @@ data:extend(
     collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},    
     
-	crafting_categories = {"core-drilling"},
-    crafting_speed = 0.1,
+	crafting_categories = {"core-drilling-1"},
+    crafting_speed = 30, -- speed with which this machine crafts its recipes.
 	ingredient_count = 1,
 	
     energy_source =
@@ -53,22 +53,7 @@ data:extend(
       usage_priority = "secondary-input"
     },
     energy_usage = "90kW",
-    --mining_power = 3,
-    --resource_searching_radius = 1.0,
-    --vector_to_place_result = {0, -1.85},
-    --module_specification =
-    --{
---      module_slots = 3
-    --},
-    --radius_visualisation_picture =
-    --{
-      --filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",
-      --width = 12,
---      height = 12
-    --},
-    --monitor_visualization_tint = {r=78, g=173, b=255},
-    --fast_replaceable_group = "mining-drill",
-	
+  
 	
 	
 	animations =
