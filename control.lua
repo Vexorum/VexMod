@@ -1,9 +1,85 @@
+vm_recipes = {"stone-core-drilling-", "coal-core-drilling-", "iron-core-drilling-", "copper-core-drilling-"}
+
+vm_recipeIndices = 
+{
+	{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+	{0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0},
+	{0, 1, 1, 1, 0, 0, 0, 0, 0, 2, 0, 2, 2, 0, 0, 0, 0, 0, 3, 0},
+	{0, 1, 1, 1, 0, 0, 0, 0, 0, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0},
+	{0, 0, 1, 1, 1, 0, 0, 0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0},
+	{0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+	{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0},
+	{0, 0, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0},
+	{0, 0, 0, 0, 0, 0, 0, 1, 1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+	{0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0},
+	{0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0},
+	{0, 0, 2, 0, 0, 0, 0, 0, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+	{0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0},
+	{0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0},
+	{0, 2, 2, 2, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0},
+	{0, 0, 0, 2, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+	{0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+	{0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 0, 0, 0, 0, 0},
+	{0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 0, 0, 0},
+	{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0}	
+}
+
+
+function vm_get_recipe(entity, number)
+	local pos = entity.position
+	local x = math.floor(math.abs(pos.x))
+	local y = math.floor(math.abs(pos.y))
+	
+	-- game.write_file("vexmod.log", "field is " .. serpent.block(vm_recipeIndices) .. "\n", true)
+	-- game.write_file("vexmod.log", "recipes is " .. serpent.block(vm_recipes) .. "\n", true)
+	
+	local spacingFactor = 3
+	
+	local xdiv = x/spacingFactor
+	local ydiv = y/spacingFactor
+	
+	local xIndex = math.floor(xdiv % 20) + 1
+	local yIndex = math.floor(ydiv % 20) + 1
+	
+	-- game.write_file("vexmod.log", "xIndex is " .. xIndex .. "\n", true)
+	-- game.write_file("vexmod.log", "yIndex is " .. yIndex .. "\n", true)
+
+	local index = vm_recipeIndices[xIndex][yIndex] + 1
+	
+	-- game.write_file("vexmod.log", "index is " .. index .. "\n", true)
+	
+	local recipe = vm_recipes[index]
+	
+	-- game.write_file("vexmod.log", "recipe is " .. recipe .. "\n", true)
+	
+	return recipe .. number
+	
+	--game.write_file("vexmod.log", "index is " .. index .. "\n", true) -- appending
+	
+	-- if index >= 0 and index < 4 then
+		-- result = "stone-core-drilling-" .. number
+	-- end
+	-- if index >= 4 and index < 6 then
+		-- result = "coal-core-drilling-" .. number
+	-- end
+	-- if index >= 6 and index < 8 then
+		-- result = "iron-core-drilling-" .. number
+	-- end
+	-- if index >= 8 and index < 10 then
+		-- result = "copper-core-drilling-" .. number
+	-- end
+	
+	-- --game.write_file("vexmod.log", "result is " .. result .. "\n", true) -- appending
+
+	-- return result
+end
+
 function vm_handle_drill_one(entity)
-	entity.recipe = "copper-core-drilling-1"
+	entity.recipe = vm_get_recipe(entity, "1")
 end
 
 function vm_handle_drill_two(entity)
-	entity.recipe = "copper-core-drilling-2"
+	entity.recipe = vm_get_recipe(entity, "2")
 end
 
 function vm_event_create_entity(entity)
@@ -34,7 +110,7 @@ function vm_fix_all_drills()
 end
 
 script.on_event({defines.events.on_tick}, function(e)
-	if e.tick % 500 == 0 then
+	if e.tick % 100 == 0 then
 		vm_fix_all_drills()
 	end
 end
