@@ -13,31 +13,29 @@ data:extend({
 		name = "iron-core-drilling-1",
 		category = "core-drilling-1",
 		enabled = true,
-		energy_required = 50,
-		ingredients =
-		{ 
-		},
+		energy_required = 20,
+		ingredients = {{"diamond-drill", 1}},
 		results =
 		{
 		  {
 			name = "coal",
 			probability = 0.2,
-			amount = 1
+			amount = 30
 		  },
 		  {
 			name = "stone",
 			probability = 0.2,
-			amount = 1
+			amount = 30
 		  },
 		  {
 			name = "iron-ore",
 			probability = 0.8,
-			amount = 1
+			amount = 30
 		  },
 		  {
 			name = "copper-ore",
 			probability = 0.2,
-			amount = 1
+			amount = 30
 		  }
 		},
 		icon = "__base__/graphics/icons/iron-ore.png",
@@ -48,31 +46,29 @@ data:extend({
 		name = "copper-core-drilling-1",
 		category = "core-drilling-1",
 		enabled = true,
-		energy_required = 50,
-		ingredients =
-		{ 
-		},
+		energy_required = 20,
+		ingredients = {{"diamond-drill", 1}},
 		results =
 		{
 		  {
 			name = "coal",
 			probability = 0.2,
-			amount = 1
+			amount = 30
 		  },
 		  {
 			name = "stone",
 			probability = 0.2,
-			amount = 1
+			amount = 30
 		  },
 		  {
 			name = "iron-ore",
 			probability = 0.2,
-			amount = 1
+			amount = 30
 		  },
 		  {
 			name = "copper-ore",
 			probability = 0.8,
-			amount = 1
+			amount = 30
 		  }
 		},
 		icon = "__base__/graphics/icons/copper-ore.png",
@@ -83,31 +79,29 @@ data:extend({
 		name = "coal-core-drilling-1",
 		category = "core-drilling-1",
 		enabled = true,
-		energy_required = 50,
-		ingredients =
-		{ 
-		},
+		energy_required = 20,
+		ingredients = {{"diamond-drill", 1}},
 		results =
 		{
 		  {
 			name = "coal",
 			probability = 0.8,
-			amount = 1
+			amount = 30
 		  },
 		  {
 			name = "stone",
 			probability = 0.2,
-			amount = 1
+			amount = 30
 		  },
 		  {
 			name = "iron-ore",
 			probability = 0.2,
-			amount = 1
+			amount = 30
 		  },
 		  {
 			name = "copper-ore",
 			probability = 0.2,
-			amount = 1
+			amount = 30
 		  }
 		},
 		icon = "__base__/graphics/icons/coal.png",
@@ -118,31 +112,29 @@ data:extend({
 		name = "stone-core-drilling-1",
 		category = "core-drilling-1",
 		enabled = true,
-		energy_required = 50,
-		ingredients =
-		{ 
-		},
+		energy_required = 20,
+		ingredients = {{"diamond-drill", 1}},
 		results =
 		{
 		  {
 			name = "coal",
 			probability = 0.2,
-			amount = 1
+			amount = 30
 		  },
 		  {
 			name = "stone",
 			probability = 0.8,
-			amount = 1
+			amount = 30
 		  },
 		  {
 			name = "iron-ore",
 			probability = 0.2,
-			amount = 1
+			amount = 30
 		  },
 		  {
 			name = "copper-ore",
 			probability = 0.2,
-			amount = 1
+			amount = 30
 		  }
 		},
 		icon = "__base__/graphics/icons/stone.png",
@@ -166,31 +158,29 @@ data:extend({
 		name = "iron-core-drilling-2",
 		category = "core-drilling-2",
 		enabled = true,
-		energy_required = 50,
-		ingredients =
-		{ 
-		},
+		energy_required = 20,
+		ingredients = {{"diamond-drill", 1}},
 		results =
 		{
 		  {
 			name = "coal",
 			probability = 0.05,
-			amount = 1
+			amount = 50
 		  },
 		  {
 			name = "stone",
 			probability = 0.05,
-			amount = 1
+			amount = 50
 		  },
 		  {
 			name = "iron-ore",
 			probability = 0.95,
-			amount = 1
+			amount = 50
 		  },
 		  {
 			name = "copper-ore",
 			probability = 0.05,
-			amount = 1
+			amount = 50
 		  }
 		},
 		icon = "__base__/graphics/icons/iron-ore.png",
@@ -201,31 +191,29 @@ data:extend({
 		name = "copper-core-drilling-2",
 		category = "core-drilling-2",
 		enabled = true,
-		energy_required = 50,
-		ingredients =
-		{ 
-		},
+		energy_required = 20,
+		ingredients = {{"diamond-drill", 1}},
 		results =
 		{
 		  {
 			name = "coal",
 			probability = 0.05,
-			amount = 1
+			amount = 50
 		  },
 		  {
 			name = "stone",
 			probability = 0.05,
-			amount = 1
+			amount = 50
 		  },
 		  {
 			name = "iron-ore",
 			probability = 0.05,
-			amount = 1
+			amount = 50
 		  },
 		  {
 			name = "copper-ore",
 			probability = 0.95,
-			amount = 1
+			amount = 50
 		  }
 		},
 		icon = "__base__/graphics/icons/copper-ore.png",
@@ -236,31 +224,29 @@ data:extend({
 		name = "coal-core-drilling-2",
 		category = "core-drilling-2",
 		enabled = true,
-		energy_required = 50,
-		ingredients =
-		{ 
-		},
+		energy_required = 20,
+		ingredients = {{"diamond-drill", 1}},
 		results =
 		{
 		  {
 			name = "coal",
 			probability = 0.95,
-			amount = 1
+			amount = 50
 		  },
 		  {
 			name = "stone",
 			probability = 0.05,
-			amount = 1
+			amount = 50
 		  },
 		  {
 			name = "iron-ore",
 			probability = 0.05,
-			amount = 1
+			amount = 50
 		  },
 		  {
 			name = "copper-ore",
 			probability = 0.05,
-			amount = 1
+			amount = 50
 		  }
 		},
 		icon = "__base__/graphics/icons/coal.png",
@@ -271,35 +257,60 @@ data:extend({
 		name = "stone-core-drilling-2",
 		category = "core-drilling-2",
 		enabled = true,
-		energy_required = 50,
-		ingredients =
-		{ 
-		},
+		energy_required = 20,
+		ingredients = {{"diamond-drill", 1}},
 		results =
 		{
 		  {
 			name = "coal",
 			probability = 0.05,
-			amount = 1
+			amount = 50
 		  },
 		  {
 			name = "stone",
 			probability = 0.95,
-			amount = 1
+			amount = 50
 		  },
 		  {
 			name = "iron-ore",
 			probability = 0.05,
-			amount = 1
+			amount = 50
 		  },
 		  {
 			name = "copper-ore",
 			probability = 0.05,
-			amount = 1
+			amount = 50
 		  }
 		},
 		icon = "__base__/graphics/icons/stone.png",
 		subgroup = "production-machine",
 	},
  
+ 
+ 	{
+		type = "recipe",
+		name = "diamond",
+		category = "crafting",
+		enabled = false,
+		energy_required = 30,
+		ingredients = {{"coal", 10}},
+		result = "diamond"
+	},
+	
+  	{
+		type = "recipe",
+		name = "diamond-drilling-head",
+		category = "crafting",
+		enabled = false,
+		energy_required = 10,
+		ingredients = {{"diamond", 1}, {"steel-plate", 1}, {"copper-cable", 10}},
+		results =
+		{
+		  {
+			name = "diamond-drill",
+			probability = 1,
+			amount = 20
+		  },
+		},
+	},
 });

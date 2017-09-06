@@ -21,4 +21,24 @@ data:extend({
 		place_result = "core-drill-2",
 		stack_size = 1
 	},
+	
+	{
+		type = "item",
+		name = "diamond",
+		icon = "__VexMod__/graphics/icons/diamond.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "raw-material",
+		order = "d[steel-plate]",
+		stack_size = 100
+	},
+	
+	{
+		type = "item",
+		name = "diamond-drill",
+		icon = "__VexMod__/graphics/icons/diamond-drill.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "raw-material",
+		order = "d[steel-plate]",
+		stack_size = 20
+	}
 })
