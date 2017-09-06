@@ -4,8 +4,7 @@ data:extend({
 		name = "core-drill-1",
 		enabled = false,
 		energy_required = 30,
-		--ingredients = {{"processing-unit", 20}, {"advanced-circuit", 100}, {"electric-mining-drill", 10}, {"steel-plate", 200}},
-		ingredients = {{"steel-plate", 2}},
+		ingredients = {{"processing-unit", 20}, {"advanced-circuit", 100}, {"electric-mining-drill", 10}, {"steel-plate", 200}},
 		result = "core-drill-1"
 	},
 	
