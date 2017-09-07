@@ -36,6 +36,11 @@ data:extend({
 			name = "copper-ore",
 			probability = 0.2,
 			amount = 30
+		  },
+		  {
+			name = "uranium-ore",
+			probability = 0.2,
+			amount = 30
 		  }
 		},
 		icon = "__base__/graphics/icons/iron-ore.png",
@@ -69,6 +74,11 @@ data:extend({
 			name = "copper-ore",
 			probability = 0.8,
 			amount = 30
+		  },
+		  {
+			name = "uranium-ore",
+			probability = 0.2,
+			amount = 30
 		  }
 		},
 		icon = "__base__/graphics/icons/copper-ore.png",
@@ -100,6 +110,11 @@ data:extend({
 		  },
 		  {
 			name = "copper-ore",
+			probability = 0.2,
+			amount = 30
+		  },
+		  {
+			name = "uranium-ore",
 			probability = 0.2,
 			amount = 30
 		  }
@@ -135,12 +150,54 @@ data:extend({
 			name = "copper-ore",
 			probability = 0.2,
 			amount = 30
+		  },
+		  {
+			name = "uranium-ore",
+			probability = 0.2,
+			amount = 30
 		  }
 		},
 		icon = "__base__/graphics/icons/stone.png",
 		subgroup = "production-machine",
 	},
- 
+	{
+		type = "recipe",
+		name = "uranium-core-drilling-1",
+		category = "core-drilling-1",
+		enabled = true,
+		energy_required = 20,
+		ingredients = {{"diamond-drill", 1}},
+		results =
+		{
+		  {
+			name = "coal",
+			probability = 0.2,
+			amount = 30
+		  },
+		  {
+			name = "stone",
+			probability = 0.2,
+			amount = 30
+		  },
+		  {
+			name = "iron-ore",
+			probability = 0.2,
+			amount = 30
+		  },
+		  {
+			name = "copper-ore",
+			probability = 0.2,
+			amount = 30
+		  },
+		  {
+			name = "uranium-ore",
+			probability = 0.8,
+			amount = 30
+		  }		  
+		},
+		icon = "__base__/graphics/icons/stone.png",
+		subgroup = "production-machine",
+	},
  
  
  
@@ -181,6 +238,11 @@ data:extend({
 			name = "copper-ore",
 			probability = 0.05,
 			amount = 50
+		  },
+		  {
+			name = "uranium-ore",
+			probability = 0.05,
+			amount = 50
 		  }
 		},
 		icon = "__base__/graphics/icons/iron-ore.png",
@@ -214,6 +276,11 @@ data:extend({
 			name = "copper-ore",
 			probability = 0.95,
 			amount = 50
+		  },
+		  {
+			name = "uranium-ore",
+			probability = 0.05,
+			amount = 50
 		  }
 		},
 		icon = "__base__/graphics/icons/copper-ore.png",
@@ -245,6 +312,11 @@ data:extend({
 		  },
 		  {
 			name = "copper-ore",
+			probability = 0.05,
+			amount = 50
+		  },
+		  {
+			name = "uranium-ore",
 			probability = 0.05,
 			amount = 50
 		  }
@@ -280,12 +352,54 @@ data:extend({
 			name = "copper-ore",
 			probability = 0.05,
 			amount = 50
+		  },
+		  {
+			name = "uranium-ore",
+			probability = 0.05,
+			amount = 50
 		  }
 		},
 		icon = "__base__/graphics/icons/stone.png",
 		subgroup = "production-machine",
 	},
- 
+	{
+		type = "recipe",
+		name = "uranium-core-drilling-2",
+		category = "core-drilling-2",
+		enabled = true,
+		energy_required = 20,
+		ingredients = {{"diamond-drill", 1}},
+		results =
+		{
+		  {
+			name = "coal",
+			probability = 0.05,
+			amount = 50
+		  },
+		  {
+			name = "stone",
+			probability = 0.05,
+			amount = 50
+		  },
+		  {
+			name = "iron-ore",
+			probability = 0.05,
+			amount = 50
+		  },
+		  {
+			name = "copper-ore",
+			probability = 0.05,
+			amount = 50
+		  },
+		  {
+			name = "uranium-ore",
+			probability = 0.95,
+			amount = 50
+		  }
+		},
+		icon = "__base__/graphics/icons/stone.png",
+		subgroup = "production-machine",
+	},
  
  	{
 		type = "recipe",
@@ -312,5 +426,15 @@ data:extend({
 			amount = 20
 		  },
 		},
+	},
+	
+	{
+		type = "recipe",
+		name = "destroyer-chest",
+		category = "crafting",
+		enabled = false,
+		energy_required = 10,
+		ingredients = {{"iron-chest", 1}, {"diamond", 1}},
+		result = "destroyer-chest"
 	},
 });

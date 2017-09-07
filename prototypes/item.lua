@@ -40,5 +40,19 @@ data:extend({
 		subgroup = "raw-material",
 		order = "d[steel-plate]",
 		stack_size = 20
+	},
+	
+	{
+	    type = "item",
+		name = "destroyer-chest",
+		icon = "__base__/graphics/icons/iron-chest.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "storage",
+		order = "a[items]-b[iron-chest]",
+		place_result = "destroyer-chest",
+		stack_size = 50
 	}
+	
 })
+
+

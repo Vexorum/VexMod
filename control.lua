@@ -82,6 +82,10 @@ function vm_handle_drill_two(entity)
 	entity.recipe = vm_get_recipe(entity, "2")
 end
 
+function vm_handle_destroyer_chest(entity)
+	entity.get_inventory(defines.inventory.chest).clear()
+end
+
 function vm_event_create_entity(entity)
 	if entity.name == "core-drill-1" then
 		vm_handle_drill_one(entity)
@@ -109,9 +113,17 @@ function vm_fix_all_drills()
 	end
 end
 
+function vm_empty_all_destroyer_chests()
+	for i, chest in ipairs(game.surfaces["nauvis"].find_entities_filtered{name = "destroyer-chest"}) do
+		--game.write_file("vexmod.log", "found a drill1\n", true) -- appending
+		vm_handle_destroyer_chest(chest)
+	end
+end
+
 script.on_event({defines.events.on_tick}, function(e)
-	if e.tick % 100 == 0 then
+	if e.tick % 1000 == 0 then
 		vm_fix_all_drills()
+		vm_empty_all_destroyer_chests()
 	end
 end
 )

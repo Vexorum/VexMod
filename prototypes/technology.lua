@@ -3,7 +3,6 @@ local pf = "p-q-"
 
 data:extend({
 
-
 	{
 		type = "technology",
 		name = "vex-diamond",
@@ -25,6 +24,26 @@ data:extend({
 		order = pf.."a-a",
 	},
 
+	{
+		type = "technology",
+		name = "vex-destroyer-chest",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vex-diamond"},
+		effects = {
+			{type = "unlock-recipe", recipe = "destroyer-chest"},
+		},
+		unit = {
+			count = 100,
+			ingredients = 
+			{
+				{"science-pack-1", 1},
+			},
+			time = 30
+		},
+		order = pf.."a-a",
+	},
+	
 	{
 		type = "technology",
 		name = "vex-core-drilling-one",
