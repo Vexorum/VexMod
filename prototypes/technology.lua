@@ -66,6 +66,7 @@ data:extend({
 		},
 		order = pf.."a-a",
 	},
+	
 	{
 		type = "technology",
 		name = "vex-core-drilling-two",
@@ -83,6 +84,52 @@ data:extend({
 				{"science-pack-2", 1},
 				{"science-pack-3", 1},
 				{"production-science-pack", 1},
+			},			
+			time = 30
+		},
+		order = pf.."a-a",
+	},
+	
+	{
+		type = "technology",
+		name = "vex-vexium-material-handling",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vex-diamond", "rocket-silo", "nuclear-power"},
+		effects = {
+			{type = "unlock-recipe", recipe = "vexium-plate"},
+			{type = "unlock-recipe", recipe = "vexium-crafter"},
+		},
+		unit = {
+			count = 20,--00,
+			ingredients = 
+			{
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
+				{"production-science-pack", 1},
+				{"high-tech-science-pack", 1},
+				{"space-science-pack", 1},
+			},			
+			time = 30
+		},
+		order = pf.."a-a",
+	},
+	
+	{
+		type = "technology",
+		name = "vex-vexium-incandescence",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vex-vexium-material-handling"},
+		effects = {
+			{type = "unlock-recipe", recipe = "vexium-lamp"},
+		},
+		unit = {
+			count = 4000,
+			ingredients = 
+			{
+				{"science-pack-1", 1},
 			},			
 			time = 30
 		},

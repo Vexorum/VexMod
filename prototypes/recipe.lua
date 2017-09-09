@@ -1,3 +1,5 @@
+
+-- drills and drilling recipes
 data:extend({
 	{
 		type = "recipe",
@@ -20,12 +22,12 @@ data:extend({
 		  {
 			name = "coal",
 			probability = 0.2,
-			amount = 30
+			amount = 3
 		  },
 		  {
 			name = "stone",
 			probability = 0.2,
-			amount = 30
+			amount = 3
 		  },
 		  {
 			name = "iron-ore",
@@ -35,12 +37,12 @@ data:extend({
 		  {
 			name = "copper-ore",
 			probability = 0.2,
-			amount = 30
+			amount = 3
 		  },
 		  {
 			name = "uranium-ore",
-			probability = 0.2,
-			amount = 30
+			probability = 0.05,
+			amount = 1
 		  }
 		},
 		icon = "__base__/graphics/icons/iron-ore.png",
@@ -58,17 +60,17 @@ data:extend({
 		  {
 			name = "coal",
 			probability = 0.2,
-			amount = 30
+			amount = 3
 		  },
 		  {
 			name = "stone",
 			probability = 0.2,
-			amount = 30
+			amount = 3
 		  },
 		  {
 			name = "iron-ore",
 			probability = 0.2,
-			amount = 30
+			amount = 3
 		  },
 		  {
 			name = "copper-ore",
@@ -77,8 +79,8 @@ data:extend({
 		  },
 		  {
 			name = "uranium-ore",
-			probability = 0.2,
-			amount = 30
+			probability = 0.05,
+			amount = 1
 		  }
 		},
 		icon = "__base__/graphics/icons/copper-ore.png",
@@ -101,22 +103,22 @@ data:extend({
 		  {
 			name = "stone",
 			probability = 0.2,
-			amount = 30
+			amount = 3
 		  },
 		  {
 			name = "iron-ore",
 			probability = 0.2,
-			amount = 30
+			amount = 3
 		  },
 		  {
 			name = "copper-ore",
 			probability = 0.2,
-			amount = 30
+			amount = 3
 		  },
 		  {
 			name = "uranium-ore",
-			probability = 0.2,
-			amount = 30
+			probability = 0.05,
+			amount = 1
 		  }
 		},
 		icon = "__base__/graphics/icons/coal.png",
@@ -134,7 +136,7 @@ data:extend({
 		  {
 			name = "coal",
 			probability = 0.2,
-			amount = 30
+			amount = 3
 		  },
 		  {
 			name = "stone",
@@ -144,17 +146,17 @@ data:extend({
 		  {
 			name = "iron-ore",
 			probability = 0.2,
-			amount = 30
+			amount = 3
 		  },
 		  {
 			name = "copper-ore",
 			probability = 0.2,
-			amount = 30
+			amount = 3
 		  },
 		  {
 			name = "uranium-ore",
-			probability = 0.2,
-			amount = 30
+			probability = 0.05,
+			amount = 1
 		  }
 		},
 		icon = "__base__/graphics/icons/stone.png",
@@ -172,27 +174,27 @@ data:extend({
 		  {
 			name = "coal",
 			probability = 0.2,
-			amount = 30
+			amount = 3
 		  },
 		  {
 			name = "stone",
 			probability = 0.2,
-			amount = 30
+			amount = 3
 		  },
 		  {
 			name = "iron-ore",
 			probability = 0.2,
-			amount = 30
+			amount = 3
 		  },
 		  {
 			name = "copper-ore",
 			probability = 0.2,
-			amount = 30
+			amount = 3
 		  },
 		  {
 			name = "uranium-ore",
 			probability = 0.8,
-			amount = 30
+			amount = 10
 		  }		  
 		},
 		icon = "__base__/graphics/icons/stone.png",
@@ -222,12 +224,12 @@ data:extend({
 		  {
 			name = "coal",
 			probability = 0.05,
-			amount = 50
+			amount = 5
 		  },
 		  {
 			name = "stone",
 			probability = 0.05,
-			amount = 50
+			amount = 5
 		  },
 		  {
 			name = "iron-ore",
@@ -237,12 +239,12 @@ data:extend({
 		  {
 			name = "copper-ore",
 			probability = 0.05,
-			amount = 50
+			amount = 5
 		  },
 		  {
 			name = "uranium-ore",
 			probability = 0.05,
-			amount = 50
+			amount = 5
 		  }
 		},
 		icon = "__base__/graphics/icons/iron-ore.png",
@@ -260,17 +262,17 @@ data:extend({
 		  {
 			name = "coal",
 			probability = 0.05,
-			amount = 50
+			amount = 5
 		  },
 		  {
 			name = "stone",
 			probability = 0.05,
-			amount = 50
+			amount = 5
 		  },
 		  {
 			name = "iron-ore",
 			probability = 0.05,
-			amount = 50
+			amount = 5
 		  },
 		  {
 			name = "copper-ore",
@@ -280,7 +282,7 @@ data:extend({
 		  {
 			name = "uranium-ore",
 			probability = 0.05,
-			amount = 50
+			amount = 5
 		  }
 		},
 		icon = "__base__/graphics/icons/copper-ore.png",
@@ -303,22 +305,22 @@ data:extend({
 		  {
 			name = "stone",
 			probability = 0.05,
-			amount = 50
+			amount = 5
 		  },
 		  {
 			name = "iron-ore",
 			probability = 0.05,
-			amount = 50
+			amount = 5
 		  },
 		  {
 			name = "copper-ore",
 			probability = 0.05,
-			amount = 50
+			amount = 5
 		  },
 		  {
 			name = "uranium-ore",
 			probability = 0.05,
-			amount = 50
+			amount = 5
 		  }
 		},
 		icon = "__base__/graphics/icons/coal.png",
@@ -336,7 +338,7 @@ data:extend({
 		  {
 			name = "coal",
 			probability = 0.05,
-			amount = 50
+			amount = 5
 		  },
 		  {
 			name = "stone",
@@ -346,17 +348,17 @@ data:extend({
 		  {
 			name = "iron-ore",
 			probability = 0.05,
-			amount = 50
+			amount = 5
 		  },
 		  {
 			name = "copper-ore",
 			probability = 0.05,
-			amount = 50
+			amount = 5
 		  },
 		  {
 			name = "uranium-ore",
 			probability = 0.05,
-			amount = 50
+			amount = 5
 		  }
 		},
 		icon = "__base__/graphics/icons/stone.png",
@@ -374,22 +376,22 @@ data:extend({
 		  {
 			name = "coal",
 			probability = 0.05,
-			amount = 50
+			amount = 5
 		  },
 		  {
 			name = "stone",
 			probability = 0.05,
-			amount = 50
+			amount = 5
 		  },
 		  {
 			name = "iron-ore",
 			probability = 0.05,
-			amount = 50
+			amount = 5
 		  },
 		  {
 			name = "copper-ore",
 			probability = 0.05,
-			amount = 50
+			amount = 5
 		  },
 		  {
 			name = "uranium-ore",
@@ -401,6 +403,10 @@ data:extend({
 		subgroup = "production-machine",
 	},
  
+});
+
+-- diamond, diamond drill, and destroyer chest
+data:extend({
  	{
 		type = "recipe",
 		name = "diamond",
@@ -436,5 +442,36 @@ data:extend({
 		energy_required = 10,
 		ingredients = {{"iron-chest", 1}, {"diamond", 1}},
 		result = "destroyer-chest"
+	},
+});
+
+-- vexium plate, crafter, and lamp
+data:extend({
+	{
+		type = "recipe",
+		name = "vexium-plate",
+		category = "vex-materials",
+		enabled = false,
+		energy_required = 1,
+		ingredients = {{"steel-plate", 1}, {"diamond", 1}, {"copper-plate", 1}, {"uranium-235", 1}},
+		result = "vexium-plate"
+	},
+	
+	{
+		type = "recipe",
+		name = "vexium-crafter",
+		enabled = false,
+		energy_required = 1,
+		ingredients = {{"centrifuge", 1}, {"diamond", 100}, {"electric-furnace", 1}},
+		result = "vexium-crafter"
+	},
+	
+	{
+		type = "recipe",
+		name = "vexium-lamp",
+		enabled = false,
+		energy_required = 1,
+		ingredients = {{"small-lamp", 1}, {"vexium-plate", 10}, {"uranium-235", 1}},
+		result = "vexium-lamp"
 	},
 });
