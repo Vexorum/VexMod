@@ -475,3 +475,25 @@ data:extend({
 		result = "vexium-lamp"
 	},
 });
+
+-- high energy cable, vexium substation
+data:extend({
+	{
+		type = "recipe",
+		name = "vexium-cable",
+		enabled = false,
+		energy_required = 1,
+		ingredients = {{"vexium-plate", 1}, {"copper-cable", 3}},
+		results = {{"vexium-cable", 3}},
+	},
+	
+	{
+		type = "recipe",
+		name = "vexium-substation",
+		enabled = false,
+		energy_required = 1,
+		ingredients = {{"substation", 3}, {"big-electric-pole", 1}, {"vexium-cable", 100}},
+		result = "vexium-substation"
+	},
+
+});

@@ -99,6 +99,7 @@ data:extend({
 		effects = {
 			{type = "unlock-recipe", recipe = "vexium-plate"},
 			{type = "unlock-recipe", recipe = "vexium-crafter"},
+			{type = "unlock-recipe", recipe = "vexium-cable"},
 		},
 		unit = {
 			count = 20,--00,
@@ -130,6 +131,27 @@ data:extend({
 			ingredients = 
 			{
 				{"science-pack-1", 1},
+			},			
+			time = 30
+		},
+		order = pf.."a-a",
+	},
+	
+		{
+		type = "technology",
+		name = "vex-vexium-power-transmission",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vex-vexium-material-handling"},
+		effects = {
+			{type = "unlock-recipe", recipe = "vexium-substation"},
+		},
+		unit = {
+			count = 6000,
+			ingredients = 
+			{
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
 			},			
 			time = 30
 		},

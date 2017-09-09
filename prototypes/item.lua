@@ -84,6 +84,26 @@ data:extend({
 		place_result = "vexium-lamp",
 		stack_size = 50
 	},
+
+	{
+		type = "item",
+		name = "vexium-cable",
+		icon = "__base__/graphics/icons/copper-cable.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "intermediate-product",
+		order = "a[copper-cable]",
+		stack_size = 50
+	},	
+	{
+		type = "item",
+		name = "vexium-substation",
+		icon = "__base__/graphics/icons/substation.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "energy-pipe-distribution",
+		order = "a[energy]-d[substation]",
+		place_result = "vexium-substation",
+		stack_size = 50
+	},
 })
 
 
