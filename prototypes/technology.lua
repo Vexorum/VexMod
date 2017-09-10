@@ -137,7 +137,7 @@ data:extend({
 		order = pf.."a-a",
 	},
 	
-		{
+	{
 		type = "technology",
 		name = "vex-vexium-power-transmission",
 		icon = F.."/graphics/technology/vex-core-drilling.png",
@@ -152,6 +152,27 @@ data:extend({
 			{
 				{"science-pack-1", 1},
 				{"science-pack-2", 1},
+			},			
+			time = 30
+		},
+		order = pf.."a-a",
+	},
+	
+	{
+		type = "technology",
+		name = "vex-vexium-irradiation",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vex-vexium-power-transmission", "laser-turrets"},
+		effects = {
+			{type = "unlock-recipe", recipe = "vexium-turret"},
+		},
+		unit = {
+			count = 1000,
+			ingredients = 
+			{
+				{"science-pack-3", 1},
+				{"military-science-pack", 4},
 			},			
 			time = 30
 		},

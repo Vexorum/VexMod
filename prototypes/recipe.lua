@@ -476,7 +476,7 @@ data:extend({
 	},
 });
 
--- high energy cable, vexium substation
+-- high energy cable, vexium substation, vexium turret
 data:extend({
 	{
 		type = "recipe",
@@ -496,4 +496,13 @@ data:extend({
 		result = "vexium-substation"
 	},
 
+	{
+		type = "recipe",
+		name = "vexium-turret",
+		enabled = false,
+		energy_required = 1,
+		ingredients = {{"laser-turret", 3}, {"vexium-plate", 100}, {"electric-furnace", 10}},
+		result = "vexium-turret"
+	},
+	
 });
