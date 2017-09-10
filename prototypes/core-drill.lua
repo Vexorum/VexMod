@@ -563,11 +563,11 @@ data:extend(
 		{
 		  type = "projectile",
 		  ammo_category = "electric",
-		  cooldown = 20,
+		  cooldown = 300,
 		  projectile_center = {-0.09375, -0.2},
 		  projectile_creation_distance = 1.4,
-		  range = 24 * 3,
-		  damage_modifier = 4,
+		  range = 24 * 4,
+		  damage_modifier = 48,
 		  ammo_type =
 		  {
 			type = "projectile",
@@ -581,8 +581,8 @@ data:extend(
 				{
 				  {
 					type = "projectile",
-					projectile = "laser",
-					starting_speed = 0.35
+					projectile = "vexium-laser",
+					starting_speed = 1.35
 				  }
 				}
 			  }
