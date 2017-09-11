@@ -439,12 +439,63 @@ data:extend(
 })
 
 -- vexium turret
+
+function vexium_turret_extension(inputs)
+return
+{
+  filename = "__VexMod__/graphics/entity/vexium-turret-gun-start.png",
+  priority = "medium",
+  width = 66 * 2,
+  height = 67 * 2,
+  frame_count = inputs.frame_count and inputs.frame_count or 15,
+  line_length = inputs.line_length and inputs.line_length or 0,
+  run_mode = inputs.run_mode and inputs.run_mode or "forward",
+  axially_symmetrical = false,
+  direction_count = 4,
+  shift = {-0.03125, -0.984375}
+}
+end
+
+function vexium_turret_extension_shadow(inputs)
+return
+{
+  filename = "__VexMod__/graphics/entity/vexium-turret-gun-start-shadow.png",
+  width = 92,
+  height = 50,
+  frame_count = inputs.frame_count and inputs.frame_count or 15,
+  line_length = inputs.line_length and inputs.line_length or 0,
+  run_mode = inputs.run_mode and inputs.run_mode or "forward",
+  axially_symmetrical = false,
+  direction_count = 4,
+  draw_as_shadow = true,
+  shift = {1.375, 0},
+}
+end
+
+function vexium_turret_extension_mask(inputs)
+return
+{
+  filename = "__VexMod__/graphics/entity/vexium-turret-gun-start-mask.png",
+  flags = { "mask" },
+  width = 51 * 2,
+  height = 47 * 2,
+  frame_count = inputs.frame_count and inputs.frame_count or 15,
+  line_length = inputs.line_length and inputs.line_length or 0,
+  run_mode = inputs.run_mode and inputs.run_mode or "forward",
+  axially_symmetrical = false,
+  apply_runtime_tint = true,
+  direction_count = 4,
+  shift = {-0.015625, -1.26563},
+}
+end
+
+
 data:extend(
 {
 	{
 		type = "electric-turret",
 		name = "vexium-turret",
-		icon = "__base__/graphics/icons/laser-turret.png",
+		icon = "__VexMod__/graphics/icons/vexium-turret.png",
 		flags = { "placeable-player", "placeable-enemy", "player-creation"},
 		minable = { mining_time = 0.5, result = "vexium-turret" },
 		max_health = 1000,
@@ -467,18 +518,18 @@ data:extend(
 		{
 		  layers =
 		  {
-			laser_turret_extension{frame_count=1, line_length = 1},
-			laser_turret_extension_shadow{frame_count=1, line_length=1},
-			laser_turret_extension_mask{frame_count=1, line_length=1}
+			vexium_turret_extension{frame_count=1, line_length = 1},
+			vexium_turret_extension_shadow{frame_count=1, line_length=1},
+			vexium_turret_extension_mask{frame_count=1, line_length=1}
 		  }
 		},
 		preparing_animation =
 		{
 		  layers =
 		  {
-			laser_turret_extension{},
-			laser_turret_extension_shadow{},
-			laser_turret_extension_mask{}
+			vexium_turret_extension{},
+			vexium_turret_extension_shadow{},
+			vexium_turret_extension_mask{}
 		  }
 		},
 		prepared_animation =
@@ -486,21 +537,21 @@ data:extend(
 		  layers =
 		  {
 			{
-			  filename = "__base__/graphics/entity/laser-turret/laser-turret-gun.png",
+			  filename = "__VexMod__/graphics/entity/vexium-turret-gun.png",
 			  line_length = 8,
-			  width = 68,
-			  height = 68,
+			  width = 68 * 2,
+			  height = 68 * 2,
 			  frame_count = 1,
 			  axially_symmetrical = false,
 			  direction_count = 64,
 			  shift = {-0.03125, -1}
 			},
 			{
-			  filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-mask.png",
+			  filename = "__VexMod__/graphics/entity/vexium-turret-gun-mask.png",
 			  flags = { "mask" },
 			  line_length = 8,
-			  width = 54,
-			  height = 44,
+			  width = 54 * 2,
+			  height = 44 * 2,
 			  frame_count = 1,
 			  axially_symmetrical = false,
 			  apply_runtime_tint = true,
@@ -508,10 +559,10 @@ data:extend(
 			  shift = {-0.03125, -1.3125},
 			},
 			{
-			  filename = "__base__/graphics/entity/laser-turret/laser-turret-gun-shadow.png",
+			  filename = "__VexMod__/graphics/entity/vexium-turret-gun-shadow.png",
 			  line_length = 8,
-			  width = 88,
-			  height = 52,
+			  width = 88 * 2,
+			  height = 52 * 2,
 			  frame_count = 1,
 			  axially_symmetrical = false,
 			  direction_count = 64,
@@ -524,9 +575,9 @@ data:extend(
 		{
 		  layers =
 		  {
-			laser_turret_extension{run_mode = "backward"},
-			laser_turret_extension_shadow{run_mode = "backward"},
-			laser_turret_extension_mask{run_mode = "backward"}
+			vexium_turret_extension{run_mode = "backward"},
+			vexium_turret_extension_shadow{run_mode = "backward"},
+			vexium_turret_extension_mask{run_mode = "backward"}
 		  }
 		},
 		base_picture =
@@ -534,7 +585,7 @@ data:extend(
 		  layers =
 		  {
 			{
-			  filename = "__base__/graphics/entity/laser-turret/laser-turret-base.png",
+			  filename = "__VexMod__/graphics/entity/vexium-turret-base.png",
 			  priority = "high",
 			  width = 98 * 2,
 			  height = 82 * 2,
@@ -544,7 +595,7 @@ data:extend(
 			  shift = {0.015625, 0.03125}
 			},
 			{
-			  filename = "__base__/graphics/entity/laser-turret/laser-turret-base-mask.png",
+			  filename = "__VexMod__/graphics/entity/vexium-turret-base-mask.png",
 			  flags = { "mask" },
 			  line_length = 1,
 			  width = 54 * 2,
