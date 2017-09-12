@@ -506,3 +506,71 @@ data:extend({
 	},
 	
 });
+
+-- vexium cargo wagon, vexium-locomotive
+data:extend({
+	{
+		type = "recipe",
+		name = "vexium-cargo-wagon",
+		enabled = false,
+		ingredients =
+		{
+		  {"cargo-wagon", 10},
+		  {"vexium-plate", 100},
+		  {"iron-gear-wheel", 1000}
+		},
+		result = "vexium-cargo-wagon"
+	},
+	{
+		type = "recipe",
+		name = "vexium-locomotive",
+		enabled = false,
+		ingredients =
+		{
+		  {"locomotive", 100},
+		  {"vexium-plate", 300},
+		  {"low-density-structure", 300},
+		  {"processing-unit", 30}
+		},
+		result = "vexium-locomotive"
+	},
+	
+	{
+		type = "recipe",
+		name = "vexium-power-frame",
+		enabled = false,
+		energy_required = 1,
+		ingredients =
+		{
+		  {"vexium-plate", 300},
+		  {"plastic-bar", 300},
+		  {"steel-plate", 300},
+		  {"battery", 300},
+		},
+		result = "vexium-power-frame"
+	},
+	{
+		type = "recipe",
+		name = "vexium-power-cell",
+		enabled = false,
+		energy_required = 1000,
+		category = "vexium-power-crafting",
+		ingredients =
+		{
+		  {"vexium-power-frame", 1}
+		},
+		result = "vexium-power-cell"
+	},
+	{
+		type = "recipe",
+		name = "vexium-cell-charger",
+		enabled = false,
+		energy_required = 1,
+		ingredients =
+		{
+		  {"vexium-crafter", 1},
+		  {"rocket-silo", 1}
+		},
+		result = "vexium-cell-charger"
+	},
+});

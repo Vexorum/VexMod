@@ -114,6 +114,59 @@ data:extend({
 		place_result = "vexium-turret",
 		stack_size = 1
 	},
+	{
+		type = "item-with-entity-data",
+		name = "vexium-cargo-wagon",
+		icon = "__base__/graphics/icons/cargo-wagon.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "transport",
+		order = "a[train-system]-g[cargo-wagon]",
+		place_result = "vexium-cargo-wagon",
+		stack_size = 1
+	},
+	
+	{
+		type = "item-with-entity-data",
+		name = "vexium-locomotive",
+		icon = "__base__/graphics/icons/diesel-locomotive.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "transport",
+		order = "a[train-system]-f[diesel-locomotive]",
+		place_result = "vexium-locomotive",
+		stack_size = 1
+	},
+  
+	{
+		type = "item",
+		name = "vexium-power-cell",
+		icon = "__base__/graphics/icons/uranium-fuel-cell.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "intermediate-product",
+		order = "r[uranium-processing]-a[uranium-fuel-cell]",
+		fuel_category = "vexium",
+		burnt_result = "vexium-power-frame",
+		fuel_value = "8GJ",
+		stack_size = 50
+	},
+	{
+		type = "item",
+		name = "vexium-power-frame",
+		icon = "__base__/graphics/icons/used-up-uranium-fuel-cell.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "intermediate-product",
+		order = "r[used-up-uranium-fuel-cell]",
+		stack_size = 50
+	},
+	{
+		type = "item",
+		name = "vexium-cell-charger",
+		icon = "__VexMod__/graphics/icons/core-drill.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "extraction-machine",
+		order = "a[items]-b[electric-mining-drill]",
+		place_result = "vexium-cell-charger",
+		stack_size = 1
+	},
 })
 
 

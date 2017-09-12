@@ -102,7 +102,7 @@ data:extend({
 			{type = "unlock-recipe", recipe = "vexium-cable"},
 		},
 		unit = {
-			count = 20,--00,
+			count = 2000,
 			ingredients = 
 			{
 				{"science-pack-1", 1},
@@ -173,6 +173,75 @@ data:extend({
 			{
 				{"science-pack-3", 1},
 				{"military-science-pack", 4},
+			},			
+			time = 30
+		},
+		order = pf.."a-a",
+	},
+	
+	{
+		type = "technology",
+		name = "vex-vexium-cargo-wagon",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vex-vexium-material-handling", "railway"},
+		effects = {
+			{type = "unlock-recipe", recipe = "vexium-cargo-wagon"},
+		},
+		unit = {
+			count = 2000,
+			ingredients = 
+			{
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+			},			
+			time = 30
+		},
+		order = pf.."a-a",
+	},
+	
+	{
+		type = "technology",
+		name = "vex-vexium-power-cells",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vex-vexium-power-transmission", "rocket-silo"},
+		effects = {
+			{type = "unlock-recipe", recipe = "vexium-power-frame"},
+			{type = "unlock-recipe", recipe = "vexium-power-cell"},
+			{type = "unlock-recipe", recipe = "vexium-cell-charger"},
+		},
+		unit = {
+			count = 4000,
+			ingredients = 
+			{
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
+				{"production-science-pack", 1},
+				{"high-tech-science-pack", 1},
+				{"space-science-pack", 1},
+			},			
+			time = 30
+		},
+		order = pf.."a-a",
+	},
+	
+	{
+		type = "technology",
+		name = "vex-vexium-powered-locomotives",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vex-vexium-power-cells", "railway"},
+		effects = {
+			{type = "unlock-recipe", recipe = "vexium-locomotive"}
+		},
+		unit = {
+			count = 40000,
+			ingredients = 
+			{
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
 			},			
 			time = 30
 		},

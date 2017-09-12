@@ -12,4 +12,13 @@ data:extend(
       type = "recipe-category",
       name = "vex-materials"
     },
+	{
+      type = "recipe-category",
+      name = "vexium-power-crafting"
+    },	
+	
+	{
+		type = "fuel-category",
+		name = "vexium"
+	}
   })
