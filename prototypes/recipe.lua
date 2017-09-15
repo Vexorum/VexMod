@@ -573,4 +573,18 @@ data:extend({
 		},
 		result = "vexium-cell-charger"
 	},
+	
+	{
+		type = "recipe",
+		name = "vexium-accumulator",
+		enabled = false,
+		energy_required = 1,
+		ingredients =
+		{
+		  {"vexium-power-frame", 9},
+		  {"vexium-power-cell", 1},
+		  {"accumulator", 100}
+		},
+		result = "vexium-accumulator"
+	},
 });

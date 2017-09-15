@@ -167,6 +167,16 @@ data:extend({
 		place_result = "vexium-cell-charger",
 		stack_size = 1
 	},
+   {
+		type = "item",
+		name = "vexium-accumulator",
+		icon = "__base__/graphics/icons/accumulator.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "energy",
+		order = "e[accumulator]-a[accumulator]",
+		place_result = "vexium-accumulator",
+		stack_size = 50
+	},
 })
 
 

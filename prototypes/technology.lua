@@ -229,6 +229,28 @@ data:extend({
 	
 	{
 		type = "technology",
+		name = "vex-vexium-accumulators",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vex-vexium-power-cells", "electric-energy-accumulators-1"},
+		effects = {
+			{type = "unlock-recipe", recipe = "vexium-accumulator"}
+		},
+		unit = {
+			count = 10000,
+			ingredients = 
+			{
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
+			},			
+			time = 30
+		},
+		order = pf.."a-a",
+	},
+	
+	{
+		type = "technology",
 		name = "vex-vexium-powered-locomotives",
 		icon = F.."/graphics/technology/vex-core-drilling.png",
 		icon_size = 128,
