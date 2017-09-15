@@ -553,7 +553,7 @@ data:extend({
 		type = "recipe",
 		name = "vexium-power-cell",
 		enabled = false,
-		energy_required = 1000,
+		energy_required = 100,
 		category = "vexium-power-crafting",
 		ingredients =
 		{
