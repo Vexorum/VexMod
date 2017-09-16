@@ -197,7 +197,7 @@ data:extend({
 			amount = 10
 		  }		  
 		},
-		icon = "__base__/graphics/icons/stone.png",
+		icon = "__base__/graphics/icons/uranium-ore.png",
 		subgroup = "production-machine",
 	},
  
@@ -399,7 +399,7 @@ data:extend({
 			amount = 50
 		  }
 		},
-		icon = "__base__/graphics/icons/stone.png",
+		icon = "__base__/graphics/icons/uranium-ore.png",
 		subgroup = "production-machine",
 	},
  
