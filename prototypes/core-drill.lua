@@ -1427,10 +1427,10 @@ data:extend(
 		energy_source =
 		{
 		  type = "electric",
-		  buffer_capacity = "1GJ",
+		  buffer_capacity = "10GJ",
 		  usage_priority = "terciary",
-		  input_flow_limit = "3GW",
-		  output_flow_limit = "3GW"
+		  input_flow_limit = "5GW",
+		  output_flow_limit = "5GW"
 		},
 		picture =
 		{

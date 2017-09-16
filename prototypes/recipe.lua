@@ -453,8 +453,8 @@ data:extend({
 		category = "vex-materials",
 		enabled = false,
 		energy_required = 1,
-		ingredients = {{"steel-plate", 1}, {"diamond", 1}, {"copper-plate", 1}, {"uranium-235", 1}},
-		result = "vexium-plate"
+		ingredients = {{"steel-plate", 2}, {"diamond", 2}, {"copper-plate", 2}, {"uranium-235", 1}},
+		results = {{"vexium-plate", 2}},
 	},
 	
 	{
