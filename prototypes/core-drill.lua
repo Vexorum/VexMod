@@ -1053,10 +1053,10 @@ data:extend(
 		selection_box = {{-1, -3}, {1, 3}},
 		drawing_box = {{-1, -4}, {1, 3}},
 		weight = 2000,
-		max_speed = 4.6,
-		max_power = "3200kW",
+		max_speed = 3.0,
+		max_power = "8MW",
 		reversing_power_modifier = 0.6,
-		braking_force = 80,
+		braking_force = 400,
 		friction_force = 0.50,
 		vertical_selection_shift = -0.5,
 		air_resistance = 0.0075, -- this is a percentage of current speed that will be subtracted

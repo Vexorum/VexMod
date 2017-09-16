@@ -145,8 +145,8 @@ data:extend({
 		order = "r[uranium-processing]-a[uranium-fuel-cell]",
 		fuel_category = "vexium",
 		burnt_result = "vexium-power-frame",
-		fuel_value = "8GJ",
-		stack_size = 50
+		fuel_value = "2GJ",
+		stack_size = 5
 	},
 	{
 		type = "item",
