@@ -600,7 +600,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "power-armor-core",
-		enabled = true, --false,
+		enabled = false,
 		energy_required = 1,
 		ingredients = {{ "power-armor-mk2", 1}},
 		result = "power-armor-core"
