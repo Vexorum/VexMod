@@ -539,13 +539,13 @@ data:extend({
 		type = "recipe",
 		name = "vexium-power-frame",
 		enabled = false,
-		energy_required = 1,
+		energy_required = 3,
 		ingredients =
 		{
 		  {"vexium-plate", 300},
-		  {"plastic-bar", 300},
+		  {"plastic-bar", 200},
 		  {"steel-plate", 300},
-		  {"battery", 300},
+		  {"battery", 100},
 		},
 		result = "vexium-power-frame"
 	},
@@ -586,5 +586,37 @@ data:extend({
 		  {"accumulator", 100}
 		},
 		result = "vexium-accumulator"
+	},
+	
+	{
+		type = "recipe",
+		name = "vexium-armor",
+		enabled = false,
+		energy_required = 25,
+		ingredients = {{ "power-armor-core", 10}, {"vexium-power-cell", 10}, {"vexium-plate", 1000}, {"iron-gear-wheel", 10000}},
+		result = "vexium-armor",
+		requester_paste_multiplier = 1
+	},
+	{
+		type = "recipe",
+		name = "power-armor-core",
+		enabled = true, --false,
+		energy_required = 1,
+		ingredients = {{ "power-armor-mk2", 1}},
+		result = "power-armor-core"
+	},
+	{
+		type = "recipe",
+		name = "vexium-laser-defense-equipment",
+		enabled = false,
+		energy_required = 10,
+		ingredients =
+		{
+		  {"vexium-power-cell", 1},
+		  {"vexium-plate", 50},
+		  {"vexium-turret", 5},
+		  {"personal-laser-defense-equipment", 20},
+		},
+		result = "vexium-laser-defense-equipment"
 	},
 });

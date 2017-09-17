@@ -177,6 +177,26 @@ data:extend({
 		place_result = "vexium-accumulator",
 		stack_size = 50
 	},
+	{
+		type = "item",
+		name = "power-armor-core",
+		icon = "__base__/graphics/icons/power-armor-mk2.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "intermediate-product",
+		order = "r[used-up-uranium-fuel-cell]",
+		stack_size = 10
+	},
+	
+	{
+		type = "item",
+		name = "vexium-laser-defense-equipment",
+		icon = "__base__/graphics/icons/personal-laser-defense-equipment.png",
+		placed_as_equipment_result = "vexium-laser-defense-equipment",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "equipment",
+		order = "d[active-defense]-a[personal-laser-defense-equipment]",
+		stack_size = 20
+	},
 })
 
 

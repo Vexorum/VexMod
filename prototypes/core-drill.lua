@@ -1496,3 +1496,109 @@ data:extend(
 		default_output_signal = {type = "virtual", name = "signal-A"}
 	},
 });
+
+-- vexium armor, vexium defense laser
+data:extend({
+	{
+		type = "armor",
+		name = "vexium-armor",
+		icon = "__base__/graphics/icons/power-armor-mk2.png",
+		flags = {"goes-to-main-inventory"},
+		resistances =
+		{
+		  {
+			type = "physical",
+			decrease = 10,
+			percent = 80
+		  },
+		  {
+			type = "acid",
+			decrease = 10,
+			percent = 80
+		  },
+		  {
+			type = "explosion",
+			decrease = 60,
+			percent = 90
+		  },
+		  {
+			type = "fire",
+			decrease = 0,
+			percent = 90
+		  }
+		},
+		durability = 200000,
+		subgroup = "armor",
+		order = "e[power-armor-mk2]",
+		stack_size = 1,
+		equipment_grid = "vexium-equipment-grid",
+		inventory_size_bonus = 60
+	},
+	
+	{
+		type = "equipment-grid",
+		name = "vexium-equipment-grid",
+		width = 14,
+		height = 22,
+		equipment_categories = {"armor"}
+	},
+	
+	{
+		type = "active-defense-equipment",
+		name = "vexium-laser-defense-equipment",
+		sprite =
+		{
+		  filename = "__base__/graphics/equipment/personal-laser-defense-equipment.png",
+		  width = 64,
+		  height = 64,
+		  priority = "medium"
+		},
+		shape =
+		{
+		  width = 4,
+		  height = 2,
+		  type = "full"
+		},
+		energy_source =
+		{
+		  type = "electric",
+		  usage_priority = "secondary-input",
+		  buffer_capacity = "100MJ"
+		},
+		attack_parameters =
+		{
+		  type = "projectile",
+		  ammo_category = "electric",
+		  cooldown = 50,
+		  damage_modifier = 150,
+		  projectile_center = {0, 0},
+		  projectile_creation_distance = 0.6,
+		  range = 32,
+		  sound = make_laser_sounds(),
+		  ammo_type =
+		  {
+			type = "projectile",
+			category = "electric",
+			energy_consumption = "4MJ",
+			projectile = "laser",
+			speed = 1,
+			action =
+			{
+			  {
+				type = "direct",
+				action_delivery =
+				{
+				  {
+					type = "projectile",
+					projectile = "laser",
+					starting_speed = 0.28
+				  }
+				}
+			  }
+			}
+		  }
+		},
+		automatic = true,
+		categories = {"armor"}
+	},
+});

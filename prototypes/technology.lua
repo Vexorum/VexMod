@@ -269,4 +269,49 @@ data:extend({
 		},
 		order = pf.."a-a",
 	},
+	
+	{
+		type = "technology",
+		name = "vex-vexium-armor",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vex-vexium-power-cells", "power-armor-2"},
+		effects = {
+			{type = "unlock-recipe", recipe = "vexium-armor"},
+			{type = "unlock-recipe", recipe = "power-armor-core"}
+		},
+		unit = {
+			count = 10000,
+			ingredients = 
+			{
+				{"science-pack-1", 3},
+				{"science-pack-2", 2},
+				{"science-pack-3", 1},
+			},			
+			time = 30
+		},
+		order = pf.."a-a",
+	},
+	
+	{
+		type = "technology",
+		name = "vexium-laser-defense-equipment",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vex-vexium-power-cells", "vex-vexium-irradiation", "personal-laser-defense-equipment"},
+		effects = {
+			{type = "unlock-recipe", recipe = "vexium-laser-defense-equipment"}
+		},
+		unit = {
+			count = 2000,
+			ingredients = 
+			{
+				{"production-science-pack", 1},
+				{"high-tech-science-pack", 1},
+				{"space-science-pack", 1},
+			},			
+			time = 30
+		},
+		order = pf.."a-a",
+	},
 })
