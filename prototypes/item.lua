@@ -14,7 +14,7 @@ data:extend({
 	{
 		type = "item",
 		name = "core-drill-2",
-		icon = "__VexMod__/graphics/icons/core-drill.png",
+		icon = "__VexMod__/graphics/icons/core-drill-2.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "extraction-machine",
 		order = "a[items]-b[electric-mining-drill]",
@@ -97,7 +97,7 @@ data:extend({
 	{
 		type = "item",
 		name = "vexium-substation",
-		icon = "__base__/graphics/icons/substation.png",
+		icon = "__VexMod__/graphics/icons/vexium-substation.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "energy-pipe-distribution",
 		order = "a[energy]-d[substation]",
@@ -107,7 +107,7 @@ data:extend({
 	{
 		type = "item",
 		name = "vexium-turret",
-		icon = "__base__/graphics/icons/laser-turret.png",
+		icon = "__VexMod__/graphics/icons/vexium-turret.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "defensive-structure",
 		order = "b[turret]-b[laser-turret]",
@@ -117,7 +117,7 @@ data:extend({
 	{
 		type = "item-with-entity-data",
 		name = "vexium-cargo-wagon",
-		icon = "__base__/graphics/icons/cargo-wagon.png",
+		icon = "__VexMod__/graphics/icons/vexium-cargo-wagon.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "transport",
 		order = "a[train-system]-g[cargo-wagon]",
@@ -128,7 +128,7 @@ data:extend({
 	{
 		type = "item-with-entity-data",
 		name = "vexium-locomotive",
-		icon = "__base__/graphics/icons/diesel-locomotive.png",
+		icon = "__VexMod__/graphics/icons/vexium-locomotive.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "transport",
 		order = "a[train-system]-f[diesel-locomotive]",
@@ -139,7 +139,7 @@ data:extend({
 	{
 		type = "item",
 		name = "vexium-power-cell",
-		icon = "__base__/graphics/icons/uranium-fuel-cell.png",
+		icon = "__VexMod__/graphics/icons/vexium-power-cell.png",
 		flags = {"goes-to-main-inventory"},
 		subgroup = "intermediate-product",
 		order = "r[uranium-processing]-a[uranium-fuel-cell]",
@@ -151,7 +151,7 @@ data:extend({
 	{
 		type = "item",
 		name = "vexium-power-frame",
-		icon = "__base__/graphics/icons/used-up-uranium-fuel-cell.png",
+		icon = "__VexMod__/graphics/icons/vexium-power-frame.png",
 		flags = {"goes-to-main-inventory"},
 		subgroup = "intermediate-product",
 		order = "r[used-up-uranium-fuel-cell]",
@@ -160,7 +160,7 @@ data:extend({
 	{
 		type = "item",
 		name = "vexium-cell-charger",
-		icon = "__VexMod__/graphics/icons/core-drill.png",
+		icon = "__VexMod__/graphics/icons/vexium-charger.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "extraction-machine",
 		order = "a[items]-b[electric-mining-drill]",
@@ -170,7 +170,7 @@ data:extend({
    {
 		type = "item",
 		name = "vexium-accumulator",
-		icon = "__base__/graphics/icons/accumulator.png",
+		icon = "__VexMod__/graphics/icons/vexium-accumulator.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "energy",
 		order = "e[accumulator]-a[accumulator]",
@@ -190,7 +190,7 @@ data:extend({
 	{
 		type = "item",
 		name = "vexium-laser-defense-equipment",
-		icon = "__base__/graphics/icons/personal-laser-defense-equipment.png",
+		icon = "__VexMod__/graphics/icons/vexium-laser-defense-equipment.png",
 		placed_as_equipment_result = "vexium-laser-defense-equipment",
 		flags = {"goes-to-main-inventory"},
 		subgroup = "equipment",

@@ -151,7 +151,7 @@ data:extend(
   {
     type = "container",
     name = "destroyer-chest",
-    icon = "__base__/graphics/icons/iron-chest.png",
+    icon = "__VexMod__/graphics/icons/destroyer-chest.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "destroyer-chest"},
     max_health = 200,
@@ -264,7 +264,7 @@ data:extend(
   {
     type = "lamp",
     name = "vexium-lamp",
-    icon = "__base__/graphics/icons/small-lamp.png",
+    icon = "__VexMod__/graphics/icons/vexium-lamp.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "vexium-lamp"},
     max_health = 100,
@@ -334,7 +334,7 @@ data:extend(
   {
     type = "electric-pole",
     name = "vexium-substation",
-    icon = "__base__/graphics/icons/substation.png",
+    icon = "__VexMod__/graphics/icons/vexium-substation.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "vexium-substation"},
     max_health = 200,
@@ -649,7 +649,7 @@ data:extend(
 	{
 		type = "cargo-wagon",
 		name = "vexium-cargo-wagon",
-		icon = "__base__/graphics/icons/cargo-wagon.png",
+		icon = "__VexMod__/graphics/icons/vexium-cargo-wagon.png",
 		flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
 		inventory_size = 100,
 		minable = {mining_time = 1, result = "vexium-cargo-wagon"},
@@ -1344,7 +1344,7 @@ data:extend(
     {
 		type = "assembling-machine",
 		name = "vexium-cell-charger",
-		icon = "__VexMod__/graphics/icons/core-drill.png",
+		icon = "__VexMod__/graphics/icons/vexium-charger.png",
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 1, result = "vexium-cell-charger"},
 		max_health = 300,
@@ -1417,7 +1417,7 @@ data:extend(
 	{
 		type = "accumulator",
 		name = "vexium-accumulator",
-		icon = "__base__/graphics/icons/accumulator.png",
+		icon = "__VexMod__/graphics/icons/vexium-accumulator.png",
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {hardness = 0.2, mining_time = 0.5, result = "vexium-accumulator"},
 		max_health = 150,
@@ -1502,7 +1502,7 @@ data:extend({
 	{
 		type = "armor",
 		name = "vexium-armor",
-		icon = "__base__/graphics/icons/power-armor-mk2.png",
+		icon = "__VexMod__/graphics/icons/vexium-armor.png",
 		flags = {"goes-to-main-inventory"},
 		resistances =
 		{
