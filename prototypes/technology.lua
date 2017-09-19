@@ -314,4 +314,27 @@ data:extend({
 		},
 		order = pf.."a-a",
 	},
+	
+	{
+		type = "technology",
+		name = "vexium-sub-spacial-structures",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vex-vexium-power-cells", "vex-vexium-incandescence", "vex-vexium-irradiation"},
+		effects = {
+			{type = "unlock-recipe", recipe = "vexium-subspace-frame"},
+			{type = "unlock-recipe", recipe = "vexium-subspace-manufacturing-environment"}
+		},
+		unit = {
+			count = 10, --000,
+			ingredients = 
+			{
+				{"science-pack-1", 3},
+				{"science-pack-2", 2},
+				{"science-pack-3", 1},
+			},			
+			time = 30
+		},
+		order = pf.."a-a",
+	},
 })

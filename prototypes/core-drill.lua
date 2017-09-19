@@ -191,7 +191,7 @@ data:extend(
   {
     type = "assembling-machine",
     name = "vexium-crafter",
-    icon = "__VexMod__/graphics/icons/core-drill.png",
+    icon = "__VexMod__/graphics/icons/vexium-crafter.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "vexium-crafter"},
     max_health = 300,
@@ -1600,5 +1600,81 @@ data:extend({
 		},
 		automatic = true,
 		categories = {"armor"}
+	},
+});
+
+-- vexium-subspace-manufacturing-environment
+data:extend({
+	{
+		type = "assembling-machine",
+		name = "vexium-subspace-manufacturing-environment",
+		icon = "__VexMod__/graphics/icons/vexium-crafter.png",
+		flags = {"placeable-neutral", "player-creation"},
+		minable = {mining_time = 1, result = "vexium-subspace-manufacturing-environment"},
+		max_health = 300,
+		resource_categories = {"basic-solid"},
+		corpse = "big-remnants",
+		collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
+		selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},    
+		
+		crafting_categories = {"vexium-subspace-crafting"},
+		crafting_speed = 1,
+		ingredient_count = 7,
+		
+		energy_source =
+		{
+		  type = "electric",
+		  -- will produce this much * energy pollution units per tick
+		  emissions = 0.05 / 1,
+		  usage_priority = "secondary-input"
+		},
+		energy_usage = "20kW",
+	  
+		animation =
+		{
+		  layers =
+		  {
+			{
+			  filename = "__VexMod__/graphics/entity/core-drill-1.png",
+			  priority = "high",
+			  width = 108,
+			  height = 110,
+			  frame_count = 32,
+			  line_length = 8,
+			  shift = util.by_pixel(0, 4),
+			  hr_version = {
+				filename = "__VexMod__/graphics/entity/hr-core-drill-1.png",
+				priority = "high",
+				width = 214,
+				height = 218,
+				frame_count = 32,
+				line_length = 8,
+				shift = util.by_pixel(0, 4),
+				scale = 0.5
+			  }
+			},
+			{
+			  filename = "__VexMod__/graphics/entity/core-drill-1-shadow.png",
+			  priority = "high",
+			  width = 98,
+			  height = 82,
+			  frame_count = 32,
+			  line_length = 8,
+			  draw_as_shadow = true,
+			  shift = util.by_pixel(12, 5),
+			  hr_version = {
+				filename = "__VexMod__/graphics/entity/hr-core-drill-1-shadow.png",
+				priority = "high",
+				width = 196,
+				height = 163,
+				frame_count = 32,
+				line_length = 8,
+				draw_as_shadow = true,
+				shift = util.by_pixel(12, 4.75),
+				scale = 0.5
+			  }
+			},
+		  },
+		},
 	},
 });

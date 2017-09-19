@@ -16,9 +16,17 @@ data:extend(
       type = "recipe-category",
       name = "vexium-power-crafting"
     },	
+	{
+      type = "recipe-category",
+      name = "vexium-subspace-crafting"
+    },	
 	
 	{
 		type = "fuel-category",
 		name = "vexium"
+	},
+	{
+		type = "fuel-category",
+		name = "vexium-subspace"
 	}
   })

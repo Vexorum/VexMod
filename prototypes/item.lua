@@ -197,6 +197,39 @@ data:extend({
 		order = "d[active-defense]-a[personal-laser-defense-equipment]",
 		stack_size = 20
 	},
+	
+   {
+		type = "item",
+		name = "vexium-subspace-manufacturing-environment",
+		icon = "__VexMod__/graphics/icons/vexium-crafter.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "extraction-machine",
+		order = "a[items]-b[electric-mining-drill]",
+		place_result = "vexium-subspace-manufacturing-environment",
+		stack_size = 1
+	},
+	{
+		type = "item",
+		name = "vexium-subspace-frame",
+		icon = "__VexMod__/graphics/icons/vexium-power-frame.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "intermediate-product",
+		order = "r[used-up-uranium-fuel-cell]",
+		stack_size = 1
+	},
+	
+	{
+		type = "item",
+		name = "vexium-vacuum-energy-module",
+		icon = "__VexMod__/graphics/icons/vexium-power-cell.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "intermediate-product",
+		order = "r[uranium-processing]-a[uranium-fuel-cell]",
+		fuel_category = "vexium-subspace",
+		burnt_result = "vexium-subspace-frame",
+		fuel_value = "50GJ",
+		stack_size = 1
+	},
 })
 
 

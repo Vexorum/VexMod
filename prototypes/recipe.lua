@@ -452,9 +452,9 @@ data:extend({
 		name = "vexium-plate",
 		category = "vex-materials",
 		enabled = false,
-		energy_required = 1,
-		ingredients = {{"steel-plate", 2}, {"diamond", 2}, {"copper-plate", 2}, {"uranium-235", 1}},
-		results = {{"vexium-plate", 2}},
+		energy_required = 10,
+		ingredients = {{"steel-plate", 5}, {"diamond", 5}, {"copper-plate", 5}, {"uranium-235", 1}},
+		results = {{"vexium-plate", 5}},
 	},
 	
 	{
@@ -620,3 +620,43 @@ data:extend({
 		result = "vexium-laser-defense-equipment"
 	},
 });
+
+-- subspace frame, subspace frame crafter
+data:extend({
+	{
+		type = "recipe",
+		name = "vexium-subspace-frame",
+		category = "vexium-subspace-crafting",
+		enabled = false,
+		ingredients =
+		{
+		  {"diamond", 100},
+		  {"vexium-plate", 100},
+		  {"vexium-lamp", 100},
+		  {"vexium-cable", 100},
+		  {"steel-plate", 100},
+		  {"copper-plate", 100},
+		  {"plastic-bar", 100},
+		},
+		result = "vexium-subspace-frame"
+	},
+	{
+		type = "recipe",
+		name = "vexium-subspace-manufacturing-environment",
+		enabled = false,
+		energy_required = 1,
+		ingredients = {{"vexium-crafter", 10}, {"vexium-turret", 10}, {"vexium-cell-charger", 10}},
+		result = "vexium-subspace-manufacturing-environment"
+	},
+});
+
+-- subspace car
+--data:extend({
+--});
+
+-- vacuum energy extraction
+--data:extend({
+--});
+
+
+
