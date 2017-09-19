@@ -337,4 +337,24 @@ data:extend({
 		},
 		order = pf.."a-a",
 	},
+	
+	{
+		type = "technology",
+		name = "vexium-sub-spacial-transport",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vexium-sub-spacial-structures", "automobilism"},
+		effects = {
+			{type = "unlock-recipe", recipe = "vexium-car"},
+		},
+		unit = {
+			count = 10, --000,
+			ingredients = 
+			{
+				{"science-pack-1", 1},
+			},			
+			time = 30
+		},
+		order = pf.."a-a",
+	},
 })

@@ -219,6 +219,17 @@ data:extend({
 	},
 	
 	{
+		type = "item-with-entity-data",
+		name = "vexium-car",
+		icon = "__base__/graphics/icons/car.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "transport",
+		order = "b[personal-transport]-a[car]",
+		place_result = "vexium-car",
+		stack_size = 1
+	},
+	
+	{
 		type = "item",
 		name = "vexium-vacuum-energy-module",
 		icon = "__VexMod__/graphics/icons/vexium-power-cell.png",

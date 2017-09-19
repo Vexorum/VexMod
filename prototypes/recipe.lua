@@ -651,8 +651,20 @@ data:extend({
 });
 
 -- subspace car
---data:extend({
---});
+data:extend({
+	{
+		type = "recipe",
+		name = "vexium-car",
+		enabled = false,
+		ingredients =
+		{
+		  {"vexium-subspace-frame", 1},
+		  {"car", 1},
+		  {"vexium-power-cell", 1},
+		},
+		result = "vexium-car"
+	},
+});
 
 -- vacuum energy extraction
 --data:extend({
