@@ -2167,7 +2167,7 @@ data:extend({
 			emissions = 0,
 			usage_priority = "primary-input"
 		},
-		energy_usage = "1W",
+		energy_usage = "10KW",
 	  
 		animation =
 		{
@@ -2229,7 +2229,7 @@ data:extend({
 		dying_explosion = "medium-explosion",
 		effectivity = 1,
 		fluid_usage_per_tick = 1,
-		maximum_temperature = 2000,
+		maximum_temperature = 1000,
 		resistances =
 		{
 		  {
