@@ -201,7 +201,7 @@ data:extend({
    {
 		type = "item",
 		name = "vexium-subspace-manufacturing-environment",
-		icon = "__VexMod__/graphics/icons/vexium-crafter.png",
+		icon = "__VexMod__/graphics/icons/subspace-manufacturing-environment.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "extraction-machine",
 		order = "a[items]-b[electric-mining-drill]",
@@ -211,7 +211,7 @@ data:extend({
 	{
 		type = "item",
 		name = "vexium-subspace-frame",
-		icon = "__VexMod__/graphics/icons/vexium-power-frame.png",
+		icon = "__VexMod__/graphics/icons/subspace-frame.png",
 		flags = {"goes-to-main-inventory"},
 		subgroup = "intermediate-product",
 		order = "r[used-up-uranium-fuel-cell]",
@@ -232,7 +232,7 @@ data:extend({
 	{
 		type = "item",
 		name = "vexium-space-generator",
-		icon = "__VexMod__/graphics/icons/vexium-crafter.png",
+		icon = "__VexMod__/graphics/icons/space-generator.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "extraction-machine",
 		order = "a[items]-b[electric-mining-drill]",
@@ -242,7 +242,7 @@ data:extend({
 	{
 		type = "item",
 		name = "vexium-vacuum-energy-module",
-		icon = "__VexMod__/graphics/icons/vexium-power-cell.png",
+		icon = "__VexMod__/graphics/icons/vacuum-energy-module.png",
 		flags = {"goes-to-main-inventory"},
 		subgroup = "intermediate-product",
 		order = "r[uranium-processing]-a[uranium-fuel-cell]",
@@ -251,7 +251,7 @@ data:extend({
 	{
 		type = "item",
 		name = "vexium-vacuum-energy-extractor",
-		icon = "__VexMod__/graphics/icons/vexium-crafter.png",
+		icon = "__VexMod__/graphics/icons/vacuum-energy-extractor.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "extraction-machine",
 		order = "a[items]-b[electric-mining-drill]",
@@ -261,7 +261,7 @@ data:extend({
 	{
 		type = "item",
 		name = "vexium-plasma-turbine",
-		icon = "__base__/graphics/icons/steam-turbine.png",
+		icon = "__VexMod__/graphics/icons/plasma-turbine.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "energy",
 		order = "b[steam-power]-c[steam-turbine]",

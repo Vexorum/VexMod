@@ -1608,7 +1608,7 @@ data:extend({
 	{
 		type = "assembling-machine",
 		name = "vexium-subspace-manufacturing-environment",
-		icon = "__VexMod__/graphics/icons/vexium-crafter.png",
+		icon = "__VexMod__/graphics/icons/subspace-manufacturing-environment.png",
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 1, result = "vexium-subspace-manufacturing-environment"},
 		max_health = 300,
@@ -2053,7 +2053,7 @@ data:extend({
 	{
 		type = "assembling-machine",
 		name = "vexium-space-generator",
-		icon = "__VexMod__/graphics/icons/vexium-crafter.png",
+		icon = "__VexMod__/graphics/icons/space-generator.png",
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 1, result = "vexium-space-generator"},
 		max_health = 300,
@@ -2127,7 +2127,7 @@ data:extend({
 	{
 		type = "assembling-machine",
 		name = "vexium-vacuum-energy-extractor",
-		icon = "__VexMod__/graphics/icons/core-drill.png",
+		icon = "__VexMod__/graphics/icons/vacuum-energy-extractor.png",
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {mining_time = 1, result = "vexium-vacuum-energy-extractor"},
 		max_health = 300,
@@ -2221,7 +2221,7 @@ data:extend({
 	{
 		type = "generator",
 		name = "vexium-plasma-turbine",
-		icon = "__base__/graphics/icons/steam-turbine.png",
+		icon = "__VexMod__/graphics/icons/plasma-turbine.png",
 		flags = {"placeable-neutral","player-creation"},
 		minable = {mining_time = 1, result = "vexium-plasma-turbine"},
 		max_health = 300,

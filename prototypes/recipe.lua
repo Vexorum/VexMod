@@ -683,7 +683,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "vexium-vacuum-energy-module",
-		icon = "__VexMod__/graphics/icons/vexium-crafter.png",
+		icon = "__VexMod__/graphics/icons/vacuum-energy-module.png",
 		category = "vexium-subspace-energy-create",
 		enabled = false,
 		subgroup = "energy",
@@ -700,7 +700,7 @@ data:extend({
 	},	
 	{
 		type = "recipe",
-		icon = "__VexMod__/graphics/icons/vexium-crafter.png",
+		icon = "__VexMod__/graphics/icons/vacuum-energy-extractor.png",
 		name = "vexium-extract-vacuum-energy",
 		category = "vexium-subspace-energy-consume",
 		enabled = false,
