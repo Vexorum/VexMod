@@ -155,7 +155,7 @@ data:extend({
 		flags = {"goes-to-main-inventory"},
 		subgroup = "intermediate-product",
 		order = "r[used-up-uranium-fuel-cell]",
-		stack_size = 50
+		stack_size = 100
 	},
 	{
 		type = "item",
