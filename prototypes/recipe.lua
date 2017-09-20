@@ -453,7 +453,7 @@ data:extend({
 		category = "vex-materials",
 		enabled = false,
 		energy_required = 10,
-		ingredients = {{"steel-plate", 5}, {"diamond", 5}, {"copper-plate", 5}, {"uranium-235", 1}},
+		ingredients = {{"steel-plate", 5}, {"diamond", 3}, {"copper-plate", 5}, {"uranium-235", 1}},
 		results = {{"vexium-plate", 5}},
 	},
 	
@@ -507,7 +507,7 @@ data:extend({
 	
 });
 
--- vexium cargo wagon, vexium-locomotive
+-- vexium cargo wagon, vexium-locomotive, vexium armor
 data:extend({
 	{
 		type = "recipe",
@@ -666,9 +666,87 @@ data:extend({
 	},
 });
 
--- vacuum energy extraction
---data:extend({
---});
+-- space generator, vacuum energy module, vacuum energy extraction
+data:extend({
+	{
+		type = "recipe",
+		name = "vexium-space-generator",
+		enabled = false,
+		ingredients =
+		{
+		  {"vexium-subspace-manufacturing-environment", 10},
+		  {"solar-panel", 1000},
+		  {"vexium-subspace-frame", 10},
+		},
+		result = "vexium-space-generator"
+	},
+	{
+		type = "recipe",
+		name = "vexium-vacuum-energy-module",
+		icon = "__VexMod__/graphics/icons/vexium-crafter.png",
+		category = "vexium-subspace-energy-create",
+		enabled = false,
+		subgroup = "energy",
+		ingredients =
+		{
+		  {"vexium-power-cell", 100},
+		  {"vexium-subspace-frame", 1},
+		},
+		results = 
+		{
+			{"vexium-power-frame", 100},
+			{"vexium-vacuum-energy-module", 1},
+		},
+	},	
+	{
+		type = "recipe",
+		icon = "__VexMod__/graphics/icons/vexium-crafter.png",
+		name = "vexium-extract-vacuum-energy",
+		category = "vexium-subspace-energy-consume",
+		enabled = false,
+		ingredients =
+		{
+		  {"vexium-vacuum-energy-module", 1},
+		},
+		results=
+		{
+			  {type="fluid", name="plasma", amount=5000, temperature=1000},
+			  {type="item", name="vexium-subspace-frame", amount=1},
+		},
+		subgroup = "fluid-recipes",
+		crafting_machine_tint =
+		{
+		  primary = {r = 0.875, g = 0.735, b = 0.000, a = 0.000}, -- #dfbb0000
+		  secondary = {r = 0.103, g = 0.940, b = 0.000, a = 0.000}, -- #1aef0000
+		  tertiary = {r = 0.564, g = 0.795, b = 0.000, a = 0.000}, -- #8fca0000
+		}
+	},	
+	
+	{
+		type = "recipe",
+		name = "vexium-vacuum-energy-extractor",
+		enabled = false,
+		ingredients =
+		{
+		  {"vexium-subspace-frame", 1},
+		  {"vexium-subspace-manufacturing-environment", 1},
+		  {"vexium-turret", 1},
+		},
+		result = "vexium-vacuum-energy-extractor"
+	},
+	{
+		type = "recipe",
+		name = "vexium-plasma-turbine",
+		enabled = false,
+		ingredients =
+		{
+			  {"steam-turbine", 1000},
+			  {"vexium-plate", 1000},
+			  {"heat-pipe", 1000},
+		},
+		result = "vexium-plasma-turbine"
+	},
+});
 
 
 

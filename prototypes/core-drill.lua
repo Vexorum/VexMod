@@ -2047,3 +2047,329 @@ data:extend({
 		inventory_size = 80
 	},
 });
+
+-- space generator, vacuum energy extractor, plasma turbine
+data:extend({
+	{
+		type = "assembling-machine",
+		name = "vexium-space-generator",
+		icon = "__VexMod__/graphics/icons/vexium-crafter.png",
+		flags = {"placeable-neutral", "player-creation"},
+		minable = {mining_time = 1, result = "vexium-space-generator"},
+		max_health = 300,
+		resource_categories = {"basic-solid"},
+		corpse = "big-remnants",
+		collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
+		selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},    
+		
+		crafting_categories = {"vexium-subspace-energy-create"},
+		crafting_speed = 1,
+		ingredient_count = 2,
+		
+		energy_source =
+		{
+		  type = "electric",
+		  -- will produce this much * energy pollution units per tick
+		  emissions = 0.05 / 1,
+		  usage_priority = "secondary-input"
+		},
+		
+		energy_usage = "20W",
+	  
+		animation =
+		{
+		  layers =
+		  {
+			{
+			  filename = "__VexMod__/graphics/entity/core-drill-1.png",
+			  priority = "high",
+			  width = 108,
+			  height = 110,
+			  frame_count = 32,
+			  line_length = 8,
+			  shift = util.by_pixel(0, 4),
+			  hr_version = {
+				filename = "__VexMod__/graphics/entity/hr-core-drill-1.png",
+				priority = "high",
+				width = 214,
+				height = 218,
+				frame_count = 32,
+				line_length = 8,
+				shift = util.by_pixel(0, 4),
+				scale = 0.5
+			  }
+			},
+			{
+			  filename = "__VexMod__/graphics/entity/core-drill-1-shadow.png",
+			  priority = "high",
+			  width = 98,
+			  height = 82,
+			  frame_count = 32,
+			  line_length = 8,
+			  draw_as_shadow = true,
+			  shift = util.by_pixel(12, 5),
+			  hr_version = {
+				filename = "__VexMod__/graphics/entity/hr-core-drill-1-shadow.png",
+				priority = "high",
+				width = 196,
+				height = 163,
+				frame_count = 32,
+				line_length = 8,
+				draw_as_shadow = true,
+				shift = util.by_pixel(12, 4.75),
+				scale = 0.5
+			  }
+			},
+		  },
+		},
+	},
+	
+	{
+		type = "assembling-machine",
+		name = "vexium-vacuum-energy-extractor",
+		icon = "__VexMod__/graphics/icons/core-drill.png",
+		flags = {"placeable-neutral", "player-creation"},
+		minable = {mining_time = 1, result = "vexium-vacuum-energy-extractor"},
+		max_health = 300,
+		resource_categories = {"basic-solid"},
+		corpse = "big-remnants",
+		collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
+		selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},    
+		fluid_boxes =
+		{
+			{
+				production_type = "input",
+				pipe_picture = assembler3pipepictures(),
+				pipe_covers = pipecoverspictures(),
+				base_area = 10,
+				base_level = -1,
+				pipe_connections = {{ type="input", position = {0, -2} }},
+				secondary_draw_orders = { north = -1 }
+			},
+			{
+				production_type = "output",
+				pipe_picture = assembler3pipepictures(),
+				pipe_covers = pipecoverspictures(),
+				base_area = 10,
+				base_level = 1,
+				pipe_connections = {{ type="output", position = {0, 2} }},
+				secondary_draw_orders = { north = -1 },
+			},
+			off_when_no_fluid_recipe = true
+		},
+		crafting_categories = {"vexium-subspace-energy-consume"},
+		crafting_speed = 1,
+		ingredient_count = 4,
+		
+		energy_source =
+		{
+			type = "electric",
+			emissions = 0,
+			usage_priority = "primary-input"
+		},
+		energy_usage = "1W",
+	  
+		animation =
+		{
+		  layers =
+		  {
+			{
+			  filename = "__VexMod__/graphics/entity/core-drill-1.png",
+			  priority = "high",
+			  width = 108,
+			  height = 110,
+			  frame_count = 32,
+			  line_length = 8,
+			  shift = util.by_pixel(0, 4),
+			  hr_version = {
+				filename = "__VexMod__/graphics/entity/hr-core-drill-1.png",
+				priority = "high",
+				width = 214,
+				height = 218,
+				frame_count = 32,
+				line_length = 8,
+				shift = util.by_pixel(0, 4),
+				scale = 0.5
+			  }
+			},
+			{
+			  filename = "__VexMod__/graphics/entity/core-drill-1-shadow.png",
+			  priority = "high",
+			  width = 98,
+			  height = 82,
+			  frame_count = 32,
+			  line_length = 8,
+			  draw_as_shadow = true,
+			  shift = util.by_pixel(12, 5),
+			  hr_version = {
+				filename = "__VexMod__/graphics/entity/hr-core-drill-1-shadow.png",
+				priority = "high",
+				width = 196,
+				height = 163,
+				frame_count = 32,
+				line_length = 8,
+				draw_as_shadow = true,
+				shift = util.by_pixel(12, 4.75),
+				scale = 0.5
+			  }
+			},
+		  },
+		},
+
+	},
+		
+	{
+		type = "generator",
+		name = "vexium-plasma-turbine",
+		icon = "__base__/graphics/icons/steam-turbine.png",
+		flags = {"placeable-neutral","player-creation"},
+		minable = {mining_time = 1, result = "vexium-plasma-turbine"},
+		max_health = 300,
+		corpse = "big-remnants",
+		dying_explosion = "medium-explosion",
+		effectivity = 1,
+		fluid_usage_per_tick = 1,
+		maximum_temperature = 2000,
+		resistances =
+		{
+		  {
+			type = "fire",
+			percent = 70
+		  }
+		},
+		collision_box = {{-1.35, -2.35}, {1.35, 2.35}},
+		selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
+		fluid_box =
+		{
+		  base_area = 1,
+		  height = 2,
+		  base_level = -1,
+		  pipe_covers = pipecoverspictures(),
+		  pipe_connections =
+		  {
+			{ type = "input-output", position = {0, 3} },
+			{ type = "input-output", position = {0, -3} },
+		  },
+		  production_type = "input-output"
+		},
+		fluid_input =
+		{
+		  name = "plasma",
+		  amount = 0.0,
+		  minimum_temperature = 100.0
+		},
+		energy_source =
+		{
+		  type = "electric",
+		  usage_priority = "secondary-output"
+		},
+		horizontal_animation =
+		{
+		  layers =
+		  {
+			{
+			  filename = "__base__/graphics/entity/steam-turbine/steam-turbine-H.png",
+			  width = 160,
+			  height = 123,
+			  frame_count = 8,
+			  line_length = 4,
+			  shift = util.by_pixel(0, -2.5),
+			  hr_version = {
+				filename = "__base__/graphics/entity/steam-turbine/hr-steam-turbine-H.png",
+				width = 320,
+				height = 245,
+				frame_count = 8,
+				line_length = 4,
+				shift = util.by_pixel(0, -2.75),
+				scale = 0.5
+			  },
+			},
+			{
+			  filename = "__base__/graphics/entity/steam-turbine/steam-turbine-H-shadow.png",
+			  width = 217,
+			  height = 74,
+			  frame_count = 8,
+			  line_length = 4,
+			  draw_as_shadow = true,
+			  shift = util.by_pixel(28.75, 18),
+			  hr_version = {
+				filename = "__base__/graphics/entity/steam-turbine/hr-steam-turbine-H-shadow.png",
+				width = 435,
+				height = 150,
+				frame_count = 8,
+				line_length = 4,
+				draw_as_shadow = true,
+				shift = util.by_pixel(28.5, 18),
+				scale = 0.5
+			  },
+			},
+		  },
+		},
+		vertical_animation =
+		{
+		 layers =
+		 {
+			{
+			  filename = "__base__/graphics/entity/steam-turbine/steam-turbine-V.png",
+			  width = 108,
+			  height = 173,
+			  frame_count = 8,
+			  line_length = 4,
+			  shift = util.by_pixel(5, 6.5),
+			  hr_version = {
+				filename = "__base__/graphics/entity/steam-turbine/hr-steam-turbine-V.png",
+				width = 217,
+				height = 347,
+				frame_count = 8,
+				line_length = 4,
+				shift = util.by_pixel(4.75, 6.75),
+				scale = 0.5
+			  },
+			},
+			{
+			  filename = "__base__/graphics/entity/steam-turbine/steam-turbine-V-shadow.png",
+			  width = 151,
+			  height = 131,
+			  frame_count = 8,
+			  line_length = 4,
+			  draw_as_shadow = true,
+			  shift = util.by_pixel(39.5, 24.5),
+			  hr_version = {
+				filename = "__base__/graphics/entity/steam-turbine/hr-steam-turbine-V-shadow.png",
+				width = 302,
+				height = 260,
+				frame_count = 8,
+				line_length = 4,
+				draw_as_shadow = true,
+				shift = util.by_pixel(39.5, 24.5),
+				scale = 0.5
+			  },
+			},
+		  },
+		},
+		smoke =
+		{
+		  {
+			name = "turbine-smoke",
+			north_position = {0.0, -1.0},
+			east_position = {0.75, -0.75},
+			frequency = 10 / 32,
+			starting_vertical_speed = 0.08,
+			slow_down_factor = 1,
+			starting_frame_deviation = 60
+		  }
+		},
+		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		working_sound =
+		{
+		  sound =
+		  {
+			filename = "__base__/sound/steam-engine-90bpm.ogg",
+			volume = 0.6
+		  },
+		  match_speed_to_activity = true,
+		},
+		min_perceived_performance = 0.25,
+		performance_to_sound_speedup = 0.5
+	},
+});

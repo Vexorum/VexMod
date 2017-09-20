@@ -231,15 +231,42 @@ data:extend({
 	
 	{
 		type = "item",
+		name = "vexium-space-generator",
+		icon = "__VexMod__/graphics/icons/vexium-crafter.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "extraction-machine",
+		order = "a[items]-b[electric-mining-drill]",
+		place_result = "vexium-space-generator",
+		stack_size = 1
+	},
+	{
+		type = "item",
 		name = "vexium-vacuum-energy-module",
 		icon = "__VexMod__/graphics/icons/vexium-power-cell.png",
 		flags = {"goes-to-main-inventory"},
 		subgroup = "intermediate-product",
 		order = "r[uranium-processing]-a[uranium-fuel-cell]",
-		fuel_category = "vexium-subspace",
-		burnt_result = "vexium-subspace-frame",
-		fuel_value = "50GJ",
 		stack_size = 1
+	},
+	{
+		type = "item",
+		name = "vexium-vacuum-energy-extractor",
+		icon = "__VexMod__/graphics/icons/vexium-crafter.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "extraction-machine",
+		order = "a[items]-b[electric-mining-drill]",
+		place_result = "vexium-vacuum-energy-extractor",
+		stack_size = 1
+	},
+	{
+		type = "item",
+		name = "vexium-plasma-turbine",
+		icon = "__base__/graphics/icons/steam-turbine.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "energy",
+		order = "b[steam-power]-c[steam-turbine]",
+		place_result = "vexium-plasma-turbine",
+		stack_size = 10
 	},
 })
 

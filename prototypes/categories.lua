@@ -19,14 +19,35 @@ data:extend(
 	{
       type = "recipe-category",
       name = "vexium-subspace-crafting"
-    },	
+    },
+	{
+      type = "recipe-category",
+      name = "vexium-subspace-energy-create"
+    },
+	{
+      type = "recipe-category",
+      name = "vexium-subspace-energy-consume"
+    },
+	
 	
 	{
 		type = "fuel-category",
 		name = "vexium"
 	},
+	
 	{
-		type = "fuel-category",
-		name = "vexium-subspace"
+		type = "fluid",
+		name = "plasma",
+		default_temperature = 15,
+		max_temperature = 2000,
+		heat_capacity = "2.2KJ",
+		icon = "__base__/graphics/icons/fluid/steam.png",
+		base_color = {r=1.0, g=1.0, b=1.0},
+		flow_color = {r=1.0, g=1.0, b=1.0},
+		order = "a[fluid]-b[steam]",
+		pressure_to_speed_ratio = 0.4,
+		flow_to_energy_ratio = 1.0,
+		gas_temperature = 15,
+		auto_barrel = false
 	}
-  })
+})

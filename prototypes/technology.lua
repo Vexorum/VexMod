@@ -357,4 +357,34 @@ data:extend({
 		},
 		order = pf.."a-a",
 	},
+	
+	{
+		type = "technology",
+		name = "vexium-vacuum-energy-extraction",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vexium-sub-spacial-structures", "solar-energy"},
+		effects = {
+			{type = "unlock-recipe", recipe = "vexium-space-generator"},
+			{type = "unlock-recipe", recipe = "vexium-vacuum-energy-module"},
+			{type = "unlock-recipe", recipe = "vexium-vacuum-energy-extractor"},
+			{type = "unlock-recipe", recipe = "vexium-extract-vacuum-energy"},
+			{type = "unlock-recipe", recipe = "vexium-plasma-turbine"},
+		},
+		unit = {
+			count = 50, --000,
+			ingredients = 
+			{
+				{"science-pack-1", 7},
+				{"science-pack-2", 6},
+				{"science-pack-3", 5},
+				{"production-science-pack", 4},
+				{"military-science-pack", 3},
+				{"high-tech-science-pack", 2},
+				{"space-science-pack", 1},
+			},			
+			time = 30
+		},
+		order = pf.."a-a",
+	},
 })
