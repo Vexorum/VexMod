@@ -2371,5 +2371,5 @@ data:extend({
 		},
 		min_perceived_performance = 0.25,
 		performance_to_sound_speedup = 0.5
-	},
+	},	
 });
