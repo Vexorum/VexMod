@@ -443,6 +443,16 @@ data:extend({
 		ingredients = {{"iron-chest", 1}, {"diamond", 1}},
 		result = "destroyer-chest"
 	},
+	
+	{
+		type = "recipe",
+		name = "vexium-chest",
+		category = "crafting",
+		enabled = false,
+		energy_required = 10,
+		ingredients = {{"steel-chest", 100}, {"vexium-plate", 20}},
+		result = "vexium-chest"
+	},
 });
 
 -- vexium plate, crafter, and lamp

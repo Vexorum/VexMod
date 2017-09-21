@@ -1,4 +1,4 @@
--- drilling stations and destroyer chest
+-- drilling stations and destroyer chest, vexium chest
 data:extend(
 {
   {
@@ -182,6 +182,57 @@ data:extend(
       height = 34,
       shift = {0.1875, 0}
     },   
+  },
+  
+  {
+    type = "container",
+    name = "vexium-chest",
+    icon = "__base__/graphics/icons/steel-chest.png",
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {mining_time = 1, result = "vexium-chest"},
+    max_health = 350,
+    corpse = "small-remnants",
+    open_sound = { filename = "__base__/sound/metallic-chest-open.ogg", volume=0.65 },
+    close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
+    resistances =
+    {
+      {
+        type = "fire",
+        percent = 90
+      },
+      {
+        type = "impact",
+        percent = 60
+      }
+    },
+    collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
+    selection_box = {{-1, -1}, {1, 1}},
+    fast_replaceable_group = "container",
+    inventory_size = 240,
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    picture =
+    {
+      filename = "__base__/graphics/entity/steel-chest/steel-chest.png",
+      priority = "extra-high",
+      width = 48,
+      height = 34,
+      shift = {0.1875, 0}
+    },
+    circuit_wire_connection_point =
+    {
+      shadow =
+      {
+        red = {0.734375, 0.453125},
+        green = {0.609375, 0.515625},
+      },
+      wire =
+      {
+        red = {0.40625, 0.21875},
+        green = {0.40625, 0.375},
+      }
+    },
+    circuit_connector_sprites = get_circuit_connector_sprites({0.1875, 0.15625}, nil, 18),
+    circuit_wire_max_distance = 9
   },
 })
 

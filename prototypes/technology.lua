@@ -119,6 +119,26 @@ data:extend({
 	
 	{
 		type = "technology",
+		name = "vex-vexium-chest",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vex-vexium-material-handling"},
+		effects = {
+			{type = "unlock-recipe", recipe = "vexium-chest"},
+		},
+		unit = {
+			count = 5000,
+			ingredients = 
+			{
+				{"science-pack-1", 1}
+			},			
+			time = 30
+		},
+		order = pf.."a-a",
+	},
+	
+	{
+		type = "technology",
 		name = "vex-vexium-incandescence",
 		icon = F.."/graphics/technology/vex-core-drilling.png",
 		icon_size = 128,

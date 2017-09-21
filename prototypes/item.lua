@@ -52,6 +52,16 @@ data:extend({
 		place_result = "destroyer-chest",
 		stack_size = 50
 	},
+	{
+		type = "item",
+		name = "vexium-chest",
+		icon = "__base__/graphics/icons/steel-chest.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "storage",
+		order = "a[items]-c[steel-chest]",
+		place_result = "vexium-chest",
+		stack_size = 50
+	},
 	
 	{
 	    type = "item",
