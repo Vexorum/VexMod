@@ -288,6 +288,16 @@ data:extend({
 		place_result = "vexium-plasma-turbine",
 		stack_size = 10
 	},
+	{
+		type = "item",
+		name = "vexium-reactor-equipment",
+		icon = "__base__/graphics/icons/fusion-reactor-equipment.png",
+		placed_as_equipment_result = "vexium-reactor-equipment",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "equipment",
+		order = "a[energy-source]-b[fusion-reactor]",
+		stack_size = 10
+	},
 })
 
 

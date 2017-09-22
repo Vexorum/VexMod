@@ -360,6 +360,31 @@ data:extend({
 	
 	{
 		type = "technology",
+		name = "vexium-reactor-equipment",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vex-vexium-power-cells", "vex-vexium-armor", "fusion-reactor-equipment"},
+		effects = {
+			{type = "unlock-recipe", recipe = "vexium-reactor-equipment"}
+		},
+		unit = {
+			count = 3000,
+			ingredients = 
+			{
+				{"science-pack-1", 2},
+				{"science-pack-2", 2},
+				{"science-pack-3", 1},
+				{"production-science-pack", 1},
+				{"high-tech-science-pack", 1},
+				{"space-science-pack", 1},
+			},			
+			time = 30
+		},
+		order = pf.."a-a",
+	},
+	
+	{
+		type = "technology",
 		name = "vexium-sub-spacial-structures",
 		icon = F.."/graphics/technology/vex-core-drilling.png",
 		icon_size = 128,

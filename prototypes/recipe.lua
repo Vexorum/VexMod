@@ -642,6 +642,20 @@ data:extend({
 		},
 		result = "vexium-laser-defense-equipment"
 	},
+	
+	{
+		type = "recipe",
+		name = "vexium-reactor-equipment",
+		enabled = false,
+		energy_required = 10,
+		ingredients =
+		{
+		  {"vexium-power-cell", 2},
+		  {"vexium-plate", 50},
+		  {"fusion-reactor-equipment", 10},
+		},
+		result = "vexium-reactor-equipment"
+	},
 });
 
 -- subspace frame, subspace frame crafter

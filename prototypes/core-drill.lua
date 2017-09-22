@@ -1942,7 +1942,7 @@ data:extend(
 	},
 });
 
--- vexium armor, vexium defense laser
+-- vexium armor, vexium defense laser, vexium portable generator
 data:extend({
 	{
 		type = "armor",
@@ -2046,6 +2046,32 @@ data:extend({
 		automatic = true,
 		categories = {"armor"}
 	},
+	
+	{
+		type = "generator-equipment",
+		name = "vexium-reactor-equipment",
+		sprite =
+		{
+		  filename = "__base__/graphics/equipment/fusion-reactor-equipment.png",
+		  width = 128,
+		  height = 128,
+		  priority = "medium"
+		},
+		shape =
+		{
+		  width = 4,
+		  height = 4,
+		  type = "full"
+		},
+		energy_source =
+		{
+		  type = "electric",
+		  usage_priority = "primary-output"
+		},
+		power = "75GW",
+		categories = {"armor"}
+	},
+	
 });
 
 -- vexium-subspace-manufacturing-environment, vexium car
