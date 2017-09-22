@@ -222,6 +222,29 @@ data:extend({
 	
 	{
 		type = "technology",
+		name = "vex-vexium-equipment-wagon",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vex-vexium-cargo-wagon", "vex-vexium-armor"},
+		effects = {
+			{type = "unlock-recipe", recipe = "vexium-equipment-wagon"},
+		},
+		unit = {
+			count = 5000,
+			ingredients = 
+			{
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
+				{"military-science-pack", 1},
+			},			
+			time = 30
+		},
+		order = pf.."a-a",
+	},
+	
+	{
+		type = "technology",
 		name = "vex-vexium-power-cells",
 		icon = F.."/graphics/technology/vex-core-drilling.png",
 		icon_size = 128,

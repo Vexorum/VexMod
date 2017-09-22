@@ -533,6 +533,19 @@ data:extend({
 	},
 	{
 		type = "recipe",
+		name = "vexium-equipment-wagon",
+		enabled = false,
+		ingredients =
+		{
+		  {"vexium-cargo-wagon", 1},
+		  {"vexium-armor", 1},
+		  {"vexium-power-cell", 10}
+		},
+		result = "vexium-equipment-wagon"
+	},
+
+	{
+		type = "recipe",
 		name = "vexium-locomotive",
 		enabled = false,
 		ingredients =

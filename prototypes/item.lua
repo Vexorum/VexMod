@@ -134,6 +134,16 @@ data:extend({
 		place_result = "vexium-cargo-wagon",
 		stack_size = 1
 	},
+	{
+		type = "item-with-entity-data",
+		name = "vexium-equipment-wagon",
+		icon = "__VexMod__/graphics/icons/vexium-cargo-wagon.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "transport",
+		order = "a[train-system]-g[cargo-wagon]",
+		place_result = "vexium-equipment-wagon",
+		stack_size = 1
+	},
 	
 	{
 		type = "item-with-entity-data",
