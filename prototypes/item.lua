@@ -147,12 +147,22 @@ data:extend({
 	
 	{
 		type = "item-with-entity-data",
-		name = "vexium-locomotive",
+		name = "vexium-locomotive-fast",
 		icon = "__VexMod__/graphics/icons/vexium-locomotive.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "transport",
 		order = "a[train-system]-f[diesel-locomotive]",
-		place_result = "vexium-locomotive",
+		place_result = "vexium-locomotive-fast",
+		stack_size = 1
+	},
+	{
+		type = "item-with-entity-data",
+		name = "vexium-locomotive-slow",
+		icon = "__VexMod__/graphics/icons/vexium-locomotive.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "transport",
+		order = "a[train-system]-f[diesel-locomotive]",
+		place_result = "vexium-locomotive-slow",
 		stack_size = 1
 	},
   
@@ -297,6 +307,26 @@ data:extend({
 		subgroup = "equipment",
 		order = "a[energy-source]-b[fusion-reactor]",
 		stack_size = 10
+	},
+	{
+		type = "item",
+		name = "vexium-logistic-robot",
+		icon = "__base__/graphics/icons/logistic-robot.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "logistic-network",
+		order = "a[robot]-b[construction-robot]",
+		place_result = "vexium-logistic-robot",
+		stack_size = 50
+	},
+	{
+		type = "item",
+		name = "vexium-construction-robot",
+		icon = "__base__/graphics/icons/construction-robot.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "logistic-network",
+		order = "a[robot]-b[construction-robot]",
+		place_result = "vexium-construction-robot",
+		stack_size = 50
 	},
 })
 

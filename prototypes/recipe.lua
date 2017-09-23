@@ -546,7 +546,7 @@ data:extend({
 
 	{
 		type = "recipe",
-		name = "vexium-locomotive",
+		name = "vexium-locomotive-fast",
 		enabled = false,
 		ingredients =
 		{
@@ -555,7 +555,18 @@ data:extend({
 		  {"low-density-structure", 300},
 		  {"processing-unit", 30}
 		},
-		result = "vexium-locomotive"
+		result = "vexium-locomotive-fast"
+	},
+	
+	{
+		type = "recipe",
+		name = "vexium-locomotive-slow",
+		enabled = false,
+		ingredients =
+		{
+			{"vexium-locomotive-fast", 1}
+		},
+		result = "vexium-locomotive-slow"
 	},
 	
 	{
@@ -785,5 +796,33 @@ data:extend({
 	},
 });
 
-
+-- vexium bots
+data:extend({
+	{
+		type = "recipe",
+		name = "vexium-logistic-robot",
+		enabled = false,
+		ingredients =
+		{
+		  {"logistic-robot", 10},
+		  {"vexium-plate", 100},
+		  {"vexium-power-cell", 1},
+		  {"iron-gear-wheel", 1000}
+		},
+		result = "vexium-logistic-robot"
+	},
+	{
+		type = "recipe",
+		name = "vexium-construction-robot",
+		enabled = false,
+		ingredients =
+		{
+		  {"construction-robot", 10},
+		  {"vexium-plate", 100},
+		  {"vexium-power-cell", 1},
+		  {"iron-gear-wheel", 1000}
+		},
+		result = "vexium-construction-robot"
+	},
+});
 

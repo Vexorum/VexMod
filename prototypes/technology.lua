@@ -299,7 +299,8 @@ data:extend({
 		icon_size = 128,
 		prerequisites = {"vex-vexium-power-cells", "railway"},
 		effects = {
-			{type = "unlock-recipe", recipe = "vexium-locomotive"}
+			{type = "unlock-recipe", recipe = "vexium-locomotive-fast"},
+			{type = "unlock-recipe", recipe = "vexium-locomotive-slow"}
 		},
 		unit = {
 			count = 40000,
@@ -307,6 +308,29 @@ data:extend({
 			{
 				{"science-pack-1", 1},
 				{"science-pack-2", 1},
+			},			
+			time = 30
+		},
+		order = pf.."a-a",
+	},
+	
+	{
+		type = "technology",
+		name = "vex-vexium-robots",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vex-vexium-power-cells", "construction-robotics", "logistic-robotics", "worker-robots-speed-5"},
+		effects = {
+			{type = "unlock-recipe", recipe = "vexium-construction-robot"},
+			{type = "unlock-recipe", recipe = "vexium-logistic-robot"},
+		},
+		unit = {
+			count = 20000,
+			ingredients = 
+			{
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
 			},			
 			time = 30
 		},
