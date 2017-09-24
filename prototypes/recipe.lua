@@ -824,5 +824,19 @@ data:extend({
 		},
 		result = "vexium-construction-robot"
 	},
+	
+	{
+		type = "recipe",
+		name = "vexium-roboport",
+		enabled = false,
+		ingredients =
+		{
+		  {"roboport", 10},
+		  {"vexium-plate", 500},
+		  {"vexium-power-cell", 10},
+		  {"vexium-crafter", 10}
+		},
+		result = "vexium-roboport"
+	},
 });
 

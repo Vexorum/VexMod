@@ -328,6 +328,16 @@ data:extend({
 		place_result = "vexium-construction-robot",
 		stack_size = 50
 	},
+	{
+		type = "item",
+		name = "vexium-roboport",
+		icon = "__base__/graphics/icons/roboport.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "logistic-network",
+		order = "c[signal]-a[roboport]",
+		place_result = "vexium-roboport",
+		stack_size = 5
+	},
 })
 
 

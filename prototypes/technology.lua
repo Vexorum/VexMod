@@ -323,6 +323,7 @@ data:extend({
 		effects = {
 			{type = "unlock-recipe", recipe = "vexium-construction-robot"},
 			{type = "unlock-recipe", recipe = "vexium-logistic-robot"},
+			{type = "unlock-recipe", recipe = "vexium-roboport"},
 		},
 		unit = {
 			count = 20000,
