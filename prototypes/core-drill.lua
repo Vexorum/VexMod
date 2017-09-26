@@ -2832,8 +2832,8 @@ data:extend({
 		max_health = 300,
 		resource_categories = {"basic-solid"},
 		corpse = "big-remnants",
-		collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
-		selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},    
+		collision_box = {{ -9.0, -8.0}, {9.0, 8.0}},
+		selection_box = {{ -8.5, -8.0}, {8.5, 8.0}},    
 		
 		crafting_categories = {"vexium-subspace-energy-create"},
 		crafting_speed = 1,
@@ -2854,44 +2854,13 @@ data:extend({
 		  layers =
 		  {
 			{
-			  filename = "__VexMod__/graphics/entity/core-drill-1.png",
+			  filename = "__VexMod__/graphics/entity/space-generator.png",
 			  priority = "high",
-			  width = 108,
-			  height = 110,
-			  frame_count = 32,
-			  line_length = 8,
+			  width = 642,
+			  height = 534,
+			  frame_count = 1,
+			  line_length = 1,
 			  shift = util.by_pixel(0, 4),
-			  hr_version = {
-				filename = "__VexMod__/graphics/entity/hr-core-drill-1.png",
-				priority = "high",
-				width = 214,
-				height = 218,
-				frame_count = 32,
-				line_length = 8,
-				shift = util.by_pixel(0, 4),
-				scale = 0.5
-			  }
-			},
-			{
-			  filename = "__VexMod__/graphics/entity/core-drill-1-shadow.png",
-			  priority = "high",
-			  width = 98,
-			  height = 82,
-			  frame_count = 32,
-			  line_length = 8,
-			  draw_as_shadow = true,
-			  shift = util.by_pixel(12, 5),
-			  hr_version = {
-				filename = "__VexMod__/graphics/entity/hr-core-drill-1-shadow.png",
-				priority = "high",
-				width = 196,
-				height = 163,
-				frame_count = 32,
-				line_length = 8,
-				draw_as_shadow = true,
-				shift = util.by_pixel(12, 4.75),
-				scale = 0.5
-			  }
 			},
 		  },
 		},
