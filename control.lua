@@ -24,6 +24,10 @@ vm_recipeIndices =
 	{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0}	
 }
 
+vm_drills_1 = {}
+vm_drills_2 = {}
+vm_destroyer_chests = {}
+vm_initialized = false
 
 function vm_get_recipe(entity, number)
 	local pos = entity.position
@@ -75,11 +79,19 @@ function vm_get_recipe(entity, number)
 end
 
 function vm_handle_drill_one(entity)
-	entity.recipe = vm_get_recipe(entity, "1")
+	if entity.surface.name == "nauvis" then
+		entity.recipe = vm_get_recipe(entity, "1")
+	else
+		entity.recipe = "stone-core-drilling-1"
+	end
 end
 
 function vm_handle_drill_two(entity)
-	entity.recipe = vm_get_recipe(entity, "2")
+	if entity.surface.name == "nauvis" then
+		entity.recipe = vm_get_recipe(entity, "2")
+	else
+		entity.recipe = "stone-core-drilling-2"
+	end
 end
 
 function vm_handle_destroyer_chest(entity)
@@ -89,10 +101,17 @@ end
 function vm_event_create_entity(entity)
 	if entity.name == "core-drill-1" then
 		vm_handle_drill_one(entity)
+		table.insert(vm_drills_1, entity)
 	end
 	
 	if entity.name == "core-drill-2" then
 		vm_handle_drill_two(entity)
+		table.insert(vm_drills_2, entity)
+	end
+	
+	if entity.name == "destroyer-chest" then
+		--vm_handle_drill_two(entity.surface, entity)
+		table.insert(vm_destroyer_chests, entity)
 	end
 end
 
@@ -102,38 +121,115 @@ function vm_fix_all_drills()
 	
 	--game.write_file("vexmod.log", "drill tick\n", true) -- appending
 	
-	for i, drill in ipairs(game.surfaces["nauvis"].find_entities_filtered{name = "core-drill-1"}) do
+	--for i, drill in ipairs(surface.find_entities_filtered{name = "core-drill-1"}) do
+	for i, drill in ipairs(vm_drills_1) do
 		--game.write_file("vexmod.log", "found a drill1\n", true) -- appending
 		vm_handle_drill_one(drill)
 	end
 	
-	for i, drill in ipairs(game.surfaces["nauvis"].find_entities_filtered{name = "core-drill-2"}) do
+	for i, drill in ipairs(vm_drills_2) do
 		--game.write_file("vexmod.log", "found a drill2\n", true) -- appending
 		vm_handle_drill_two(drill)
 	end
 end
 
 function vm_empty_all_destroyer_chests()
-	for i, chest in ipairs(game.surfaces["nauvis"].find_entities_filtered{name = "destroyer-chest"}) do
+	for i, chest in ipairs(vm_destroyer_chests) do
 		--game.write_file("vexmod.log", "found a drill1\n", true) -- appending
 		vm_handle_destroyer_chest(chest)
 	end
 end
 
+function vm_find_all_ticking_objects()
+	for i, surface in pairs(game.surfaces) do
+		for i, drill1 in ipairs(surface.find_entities_filtered{name = "core-drill-1"}) do
+			table.insert(vm_drills_1, drill1)
+		end
+		for i, drill2 in ipairs(surface.find_entities_filtered{name = "core-drill-2"}) do
+			table.insert(vm_drills_2, drill2)
+		end
+		for i, dchest in ipairs(surface.find_entities_filtered{name = "destroyer-chest"}) do
+			table.insert(vm_destroyer_chests, dchest)
+		end
+	end
+end
+
 script.on_event({defines.events.on_tick}, function(e)
+	if vm_initialized == false then
+		vm_initialized = true
+		--game.write_file("vexmod.log", "initialize!\n", true)
+		vm_find_all_ticking_objects()
+
+		--game.write_file("vexmod.log", "initialized with " .. serpent.block(vm_drills_1) .. " drill_1\n", true)
+		--game.write_file("vexmod.log", "initialized with " .. serpent.block(vm_drills_2) .. " drill_2\n", true)
+		--game.write_file("vexmod.log", "initialized with " .. serpent.block(vm_destroyer_chests) .. " destroyer_chests\n", true)
+	end
+
 	if e.tick % 1000 == 0 then
-		vm_fix_all_drills()
-		vm_empty_all_destroyer_chests()
+		--for i, surface in pairs(game.surfaces) do
+			vm_fix_all_drills()
+			vm_empty_all_destroyer_chests()
+		--end
 	end
 end
 )
 
 script.on_event({defines.events.on_robot_built_entity}, function (e)
+	--game.write_file("vexmod.log", "a robot built an entity\n", true)
 	vm_event_create_entity(e.created_entity)
 end
 )
 
 script.on_event({defines.events.on_built_entity}, function (e)
+	--game.write_file("vexmod.log", "a player built an entity\n", true)
 	vm_event_create_entity(e.created_entity)
 end
 )
+
+function vm_handle_entity_removed(entity)
+	-- loop backwards through arrays to find and remove the deleted entity
+	if entity.name == "core-drill-1" then
+		for i=#vm_drills_1,1,-1 do
+			if vm_drills_1[i] == entity then
+				table.remove(vm_drills_1, i)
+			end
+		end
+	end
+	
+	if entity.name == "core-drill-2" then
+		for i=#vm_drills_2,1,-1 do
+			if vm_drills_2[i] == entity then
+				table.remove(vm_drills_2, i)
+			end
+		end
+	end
+	
+	if entity.name == "destroyer-chest" then
+		for i=#vm_destroyer_chests,1,-1 do
+			if vm_destroyer_chests[i] == entity then
+				table.remove(vm_destroyer_chests, i)
+			end
+		end
+	end
+end
+
+script.on_event({defines.events.on_player_mined_entity}, function (e)
+	vm_handle_entity_removed(e.entity)
+end
+)
+
+script.on_event({defines.events.on_robot_mined_entity}, function (e)
+	vm_handle_entity_removed(e.entity)
+end
+)
+
+script.on_event({defines.events.on_entity_died}, function (e)
+	vm_handle_entity_removed(e.entity)
+end
+)
+
+script.on_load(function (e)
+	vm_initialized = false
+end
+)
+

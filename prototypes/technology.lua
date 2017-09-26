@@ -419,7 +419,7 @@ data:extend({
 			{type = "unlock-recipe", recipe = "vexium-subspace-manufacturing-environment"}
 		},
 		unit = {
-			count = 10, --000,
+			count = 10000,
 			ingredients = 
 			{
 				{"science-pack-1", 3},
@@ -441,7 +441,7 @@ data:extend({
 			{type = "unlock-recipe", recipe = "vexium-car"},
 		},
 		unit = {
-			count = 10, --000,
+			count = 10000,
 			ingredients = 
 			{
 				{"science-pack-1", 1},
@@ -465,7 +465,7 @@ data:extend({
 			{type = "unlock-recipe", recipe = "vexium-plasma-turbine"},
 		},
 		unit = {
-			count = 50, --000,
+			count = 50000,
 			ingredients = 
 			{
 				{"science-pack-1", 7},
