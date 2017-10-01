@@ -840,7 +840,7 @@ data:extend({
 	},
 });
 
--- wide crafter, large furnace, large radar
+-- wide crafter, large furnace, large radar, lab
 data:extend({
 	{
 		type = "recipe",
@@ -865,5 +865,13 @@ data:extend({
 		energy_required = 1,
 		ingredients = {{"radar", 10}, {"vexium-plate", 50}, {"big-electric-pole", 10}},
 		result = "large-radar"
+	},
+	{
+		type = "recipe",
+		name = "super-lab",
+		enabled = false,
+		energy_required = 1,
+		ingredients = {{"lab", 11}, {"vexium-plate", 60}, {"vexium-power-cell", 1}},
+		result = "super-lab"
 	},
 });

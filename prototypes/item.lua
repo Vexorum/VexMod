@@ -368,6 +368,16 @@ data:extend({
 		place_result = "large-radar",
 		stack_size = 50
 	},
+	{
+		type = "item",
+		name = "super-lab",
+		icon = "__base__/graphics/icons/lab.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "production-machine",
+		order = "g[lab-2]",
+		place_result = "super-lab",
+		stack_size = 10
+	},
 })
 
 

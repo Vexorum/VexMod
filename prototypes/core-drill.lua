@@ -3554,7 +3554,7 @@ data:extend({
 	},
 });
 
--- wide crafter, large furnace, large radar
+-- wide crafter, large furnace, large radar, faster lab
 data:extend({
 	{
 		type = "assembling-machine",
@@ -3848,5 +3848,71 @@ data:extend({
 		  apparent_volume = 2,
 		},
 		radius_minimap_visualisation_color = { r = 0.059, g = 0.092, b = 0.235, a = 0.275 },
+	},
+	
+	{
+		type = "lab",
+		name = "super-lab",
+		icon = "__base__/graphics/icons/lab.png",
+		flags = {"placeable-player", "player-creation"},
+		minable = {mining_time = 1, result = "super-lab"},
+		max_health = 150,
+		corpse = "big-remnants",
+		dying_explosion = "medium-explosion",
+		collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
+		selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+		light = {intensity = 0.75, size = 8, color = {r = 1.0, g = 1.0, b = 1.0}},
+		on_animation =
+		{
+		  filename = "__base__/graphics/entity/lab/lab.png",
+		  width = 113,
+		  height = 91,
+		  frame_count = 33,
+		  line_length = 11,
+		  animation_speed = 1 / 3,
+		  shift = {0.2, 0.15}
+		},
+		off_animation =
+		{
+		  filename = "__base__/graphics/entity/lab/lab.png",
+		  width = 113,
+		  height = 91,
+		  frame_count = 1,
+		  shift = {0.2, 0.15}
+		},
+		working_sound =
+		{
+		  sound =
+		  {
+			filename = "__base__/sound/lab.ogg",
+			volume = 0.7
+		  },
+		  apparent_volume = 1
+		},
+		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		energy_source =
+		{
+		  type = "electric",
+		  usage_priority = "secondary-input"
+		},
+		energy_usage = "800kW",
+		researching_speed = 10,
+		inputs =
+		{
+		  "science-pack-1",
+		  "science-pack-2",
+		  "science-pack-3",
+		  "military-science-pack",
+		  "production-science-pack",
+		  "high-tech-science-pack",
+		  "space-science-pack"
+		},
+		module_specification =
+		{
+		  module_slots = 2,
+		  max_entity_info_module_icons_per_row = 3,
+		  max_entity_info_module_icon_rows = 1,
+		  module_info_icon_shift = {0, 0.9}
+		}
 	},
 });
