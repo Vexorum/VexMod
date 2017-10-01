@@ -3553,3 +3553,300 @@ data:extend({
 		default_total_construction_output_signal = {type = "virtual", name = "signal-T"},
 	},
 });
+
+-- wide crafter, large furnace, large radar
+data:extend({
+	{
+		type = "assembling-machine",
+		name = "assembling-machine-4",
+		icon = "__base__/graphics/icons/assembling-machine-3.png",
+		flags = {"placeable-neutral","placeable-player", "player-creation"},
+		minable = {hardness = 0.2, mining_time = 0.5, result = "assembling-machine-4"},
+		max_health = 400,
+		corpse = "big-remnants",
+		dying_explosion = "medium-explosion",
+		resistances =
+		{
+		  {
+			type = "fire",
+			percent = 70
+		  }
+		},
+		open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
+		close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
+		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		working_sound =
+		{
+		  sound = {
+			{
+			  filename = "__base__/sound/assembling-machine-t3-1.ogg",
+			  volume = 0.8
+			},
+			{
+			  filename = "__base__/sound/assembling-machine-t3-2.ogg",
+			  volume = 0.8
+			},
+		  },
+		  idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+		  apparent_volume = 1.5,
+		},
+		collision_box = {{-1.7, -0.2}, {1.7, 0.2}},	
+		selection_box = {{-1.8, -0.3}, {1.7, 0.3}},
+		fast_replaceable_group = "assembling-machine",
+		rotatable = false,
+		animation =
+		{
+			north =
+			{
+				layers =
+				{
+					{
+						filename = "__VexMod__/graphics/entity/assembling-machine-4.png",
+						priority = "high",
+						width = 151,
+						height = 47,
+						frame_count = 1,
+						line_length = 1,
+						shift = util.by_pixel(0, -0.5),
+					},
+				},
+			},
+			east =
+			{
+				layers =
+				{
+					{
+						filename = "__VexMod__/graphics/entity/assembling-machine-4-T.png",
+						priority = "high",
+						width = 151,
+						height = 47,
+						frame_count = 1,
+						line_length = 1,
+						shift = util.by_pixel(0, -0.5),
+					},
+				},
+			},
+			south =
+			{
+				layers =
+				{
+					{
+						filename = "__VexMod__/graphics/entity/assembling-machine-4.png",
+						priority = "high",
+						width = 151,
+						height = 47,
+						frame_count = 1,
+						line_length = 1,
+						shift = util.by_pixel(0, -0.5),
+					},
+				},
+			},
+			west =
+			{
+				layers =
+				{
+					{
+						filename = "__VexMod__/graphics/entity/assembling-machine-4-T.png",
+						priority = "high",
+						width = 151,
+						height = 47,
+						frame_count = 1,
+						line_length = 1,
+						shift = util.by_pixel(0, -0.5),
+					},
+				},
+			},
+		},		
+
+		crafting_categories = {"crafting", "advanced-crafting"},
+		crafting_speed = 12.5,
+		energy_source =
+		{
+		  type = "electric",
+		  usage_priority = "secondary-input",
+		  emissions = 0.03 / 3.5
+		},
+		energy_usage = "4MW",
+		ingredient_count = 6,
+		module_specification =
+		{
+		  module_slots = 4
+		},
+		allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+	},
+	
+	{
+		type = "furnace",
+		name = "large-electric-furnace",
+		icon = "__base__/graphics/icons/electric-furnace.png",
+		flags = {"placeable-neutral", "placeable-player", "player-creation"},
+		minable = {mining_time = 1, result = "large-electric-furnace"},
+		max_health = 350,
+		corpse = "big-remnants",
+		dying_explosion = "medium-explosion",
+		light = {intensity = 1, size = 10},
+		resistances =
+		{
+		  {
+			type = "fire",
+			percent = 80
+		  }
+		},
+		collision_box = {{-3.1, -3.0}, {2.6, 3.0}},
+		selection_box = {{-3.1, -3.0}, {2.6, 3.0}},
+		module_specification =
+		{
+		  module_slots = 2,
+		  module_info_icon_shift = {0, 0.8}
+		},
+		allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+		crafting_categories = {"smelting"},
+		result_inventory_size = 2,
+		crafting_speed = 30,
+		energy_usage = "3MW",
+		source_inventory_size = 1,
+		energy_source =
+		{
+		  type = "electric",
+		  usage_priority = "secondary-input",
+		  emissions = 0.005
+		},
+		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		working_sound =
+		{
+		  sound =
+		  {
+			filename = "__base__/sound/electric-furnace.ogg",
+			volume = 0.7
+		  },
+		  apparent_volume = 1.5
+		},
+		animation =
+		{
+		  layers = {
+		  {
+			filename = "__base__/graphics/entity/electric-furnace/electric-furnace-base.png",
+			priority = "high",
+			width = 129,
+			height = 100,
+			frame_count = 1,
+			shift = {0.421875, 0},
+			scale = 2.0,
+			hr_version = {
+			  filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace.png",
+			  priority = "high",
+			  width = 239,
+			  height = 219,
+			  frame_count = 1,
+			  shift = util.by_pixel(0.75, 5.75),
+			  scale = 1.0
+			}
+		  },
+		  {
+			filename = "__base__/graphics/entity/electric-furnace/electric-furnace-shadow.png",
+			priority = "high",
+			width = 129,
+			height = 100,
+			frame_count = 1,
+			shift = {0.421875, 0},
+			scale = 2.0,
+			draw_as_shadow = true,
+			hr_version = {
+			  filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace-shadow.png",
+			  priority = "high",
+			  width = 227,
+			  height = 171,
+			  frame_count = 1,
+			  draw_as_shadow = true,
+			  shift = util.by_pixel(11.25, 7.75),
+			  scale = 1.0
+			}
+		  }
+		  }
+		},
+		working_visualisations =
+		{
+		  {
+			animation =
+			{
+			  filename = "__base__/graphics/entity/electric-furnace/electric-furnace-heater.png",
+			  priority = "high",
+			  width = 25,
+			  height = 15,
+			  frame_count = 12,
+			  animation_speed = 0.5,
+			  shift = {-0.1, 2},
+			  scale = 2.0,
+			  hr_version = {
+				filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
+				priority = "high",
+				width = 60,
+				height = 56,
+				frame_count = 12,
+				animation_speed = 0.5,
+				shift = util.by_pixel(1.75, 32.75),
+				scale = 1.0
+			  }
+			},
+			light = {intensity = 0.4, size = 6, shift = {0.0, 1.0}, color = {r = 1.0, g = 1.0, b = 1.0}}
+		  },
+		  
+		},
+		fast_replaceable_group = "furnace"
+	},
+
+	{
+		type = "radar",
+		name = "large-radar",
+		icon = "__base__/graphics/icons/radar.png",
+		flags = {"placeable-player", "player-creation"},
+		minable = {hardness = 0.2, mining_time = 0.5, result = "large-radar"},
+		max_health = 250,
+		corpse = "big-remnants",
+		resistances =
+		{
+		  {
+			type = "fire",
+			percent = 70
+		  },
+		  {
+			type = "impact",
+			percent = 30
+		  }
+		},
+		collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
+		selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+		energy_per_sector = "10MJ",
+		max_distance_of_sector_revealed = 55,
+		max_distance_of_nearby_sector_revealed = 20,
+		energy_per_nearby_scan = "350kJ",
+		energy_source =
+		{
+		  type = "electric",
+		  usage_priority = "secondary-input"
+		},
+		energy_usage = "3MW",
+		pictures =
+		{
+		  filename = "__base__/graphics/entity/radar/radar.png",
+		  priority = "low",
+		  width = 153,
+		  height = 131,
+		  apply_projection = false,
+		  direction_count = 64,
+		  line_length = 8,
+		  shift = util.by_pixel(27.5,-12.5)
+		},
+		vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+		working_sound =
+		{
+		  sound = {
+			{
+			  filename = "__base__/sound/radar.ogg"
+			}
+		  },
+		  apparent_volume = 2,
+		},
+		radius_minimap_visualisation_color = { r = 0.059, g = 0.092, b = 0.235, a = 0.275 },
+	},
+});

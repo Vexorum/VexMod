@@ -338,6 +338,36 @@ data:extend({
 		place_result = "vexium-roboport",
 		stack_size = 5
 	},
+	{
+		type = "item",
+		name = "assembling-machine-4",
+		icon = "__base__/graphics/icons/assembling-machine-3.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "production-machine",
+		order = "c[assembling-machine-4]",
+		place_result = "assembling-machine-4",
+		stack_size = 50
+	},
+	{
+		type = "item",
+		name = "large-electric-furnace",
+		icon = "__base__/graphics/icons/electric-furnace.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "smelting-machine",
+		order = "c[electric-furnace-2]",
+		place_result = "large-electric-furnace",
+		stack_size = 50
+	},
+	{
+		type = "item",
+		name = "large-radar",
+		icon = "__base__/graphics/icons/radar.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "defensive-structure",
+		order = "d[radar]-a[radar]",
+		place_result = "large-radar",
+		stack_size = 50
+	},
 })
 
 

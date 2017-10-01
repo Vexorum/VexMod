@@ -162,7 +162,7 @@ data:extend({
 		name = "vex-vexium-power-transmission",
 		icon = F.."/graphics/technology/vex-core-drilling.png",
 		icon_size = 128,
-		prerequisites = {"vex-vexium-material-handling"},
+		prerequisites = {"vex-vexium-material-handling", "electric-energy-distribution-2"},
 		effects = {
 			{type = "unlock-recipe", recipe = "vexium-substation"},
 		},
@@ -178,6 +178,70 @@ data:extend({
 		order = pf.."a-a",
 	},
 	
+	{
+		type = "technology",
+		name = "vex-vexium-enhanced-assemblers",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vex-vexium-material-handling", "automation-3"},
+		effects = {
+			{type = "unlock-recipe", recipe = "assembling-machine-4"},
+		},
+		unit = {
+			count = 4000,
+			ingredients = 
+			{
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
+			},			
+			time = 30
+		},
+		order = pf.."a-a",
+	},
+	
+	{
+		type = "technology",
+		name = "vex-vexium-enhanced-furnaces",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vex-vexium-material-handling", "advanced-material-processing-2"},
+		effects = {
+			{type = "unlock-recipe", recipe = "large-electric-furnace"},
+		},
+		unit = {
+			count = 4000,
+			ingredients = 
+			{
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
+			},			
+			time = 30
+		},
+		order = pf.."a-a",
+	},
+	
+	{
+		type = "technology",
+		name = "vex-perimeter-monitoring-system",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vex-vexium-material-handling", "electric-energy-distribution-1"},
+		effects = {
+			{type = "unlock-recipe", recipe = "large-radar"},
+		},
+		unit = {
+			count = 7000,
+			ingredients = 
+			{
+				{"science-pack-1", 1},
+			},			
+			time = 30
+		},
+		order = pf.."a-a",
+	},
+		
 	{
 		type = "technology",
 		name = "vex-vexium-irradiation",

@@ -840,3 +840,30 @@ data:extend({
 	},
 });
 
+-- wide crafter, large furnace, large radar
+data:extend({
+	{
+		type = "recipe",
+		name = "assembling-machine-4",
+		enabled = false,
+		energy_required = 1,
+		ingredients = {{"assembling-machine-3", 10}, {"vexium-plate", 30}},
+		result = "assembling-machine-4"
+	},
+	{
+		type = "recipe",
+		name = "large-electric-furnace",
+		enabled = false,
+		energy_required = 1,
+		ingredients = {{"electric-furnace", 10}, {"vexium-plate", 45}},
+		result = "large-electric-furnace"
+	},
+	{
+		type = "recipe",
+		name = "large-radar",
+		enabled = false,
+		energy_required = 1,
+		ingredients = {{"radar", 10}, {"vexium-plate", 50}, {"big-electric-pole", 10}},
+		result = "large-radar"
+	},
+});
