@@ -37,7 +37,7 @@ function vm_get_recipe(entity, number)
 	-- game.write_file("vexmod.log", "field is " .. serpent.block(vm_recipeIndices) .. "\n", true)
 	-- game.write_file("vexmod.log", "recipes is " .. serpent.block(vm_recipes) .. "\n", true)
 	
-	local spacingFactor = 9
+	local spacingFactor = 14
 	
 	local xdiv = x/spacingFactor
 	local ydiv = y/spacingFactor
