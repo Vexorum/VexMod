@@ -24,6 +24,16 @@ data:extend({
 	
 	{
 		type = "item",
+		name = "ground-penetrating-radar",
+		icon = "__VexMod__/graphics/icons/gpr.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "extraction-machine",
+		order = "a[items]-b[electric-mining-drill]",
+		stack_size = 1
+	},
+	
+	{
+		type = "item",
 		name = "diamond",
 		icon = "__VexMod__/graphics/icons/diamond.png",
 		flags = {"goes-to-main-inventory"},

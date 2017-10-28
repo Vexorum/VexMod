@@ -29,10 +29,9 @@ vm_drills_2 = {}
 vm_destroyer_chests = {}
 vm_initialized = false
 
-function vm_get_recipe(entity, number)
-	local pos = entity.position
-	local x = math.floor(math.abs(pos.x))
-	local y = math.floor(math.abs(pos.y))
+function vm_get_recipe_index(position)
+	local x = math.floor(math.abs(position.x))
+	local y = math.floor(math.abs(position.y))
 	
 	-- game.write_file("vexmod.log", "field is " .. serpent.block(vm_recipeIndices) .. "\n", true)
 	-- game.write_file("vexmod.log", "recipes is " .. serpent.block(vm_recipes) .. "\n", true)
@@ -49,6 +48,12 @@ function vm_get_recipe(entity, number)
 	-- game.write_file("vexmod.log", "yIndex is " .. yIndex .. "\n", true)
 
 	local index = vm_recipeIndices[xIndex][yIndex] + 1
+	
+	return index
+end
+
+function vm_get_recipe(entity, number)
+	local index = vm_get_recipe_index(entity.position)
 	
 	-- game.write_file("vexmod.log", "index is " .. index .. "\n", true)
 	
@@ -76,6 +81,37 @@ function vm_get_recipe(entity, number)
 	-- --game.write_file("vexmod.log", "result is " .. result .. "\n", true) -- appending
 
 	-- return result
+end
+
+function vm_indicate_for_player(player)
+	local pos = player.character.position
+	local index = vm_get_recipe_index(pos)
+	
+	if index == 1 then
+		player.print("GPR: Stone")
+	end
+	if index == 2 then
+		player.print("GPR: Coal")
+	end
+	if index == 3 then
+		player.print("GPR: Iron")
+	end
+	if index == 4 then
+		player.print("GPR: Copper")
+	end
+	if index == 5 then
+		player.print("GPR: Uranium")
+	end	
+end
+
+function vm_handle_player_indicator()
+	for i, player in pairs(game.players) do
+		local inventory = player.get_inventory(defines.inventory.player_quickbar)
+		local indicators = inventory.get_item_count("ground-penetrating-radar")
+		if indicators > 0 then
+			vm_indicate_for_player(player)
+		end
+	end
 end
 
 function vm_handle_drill_one(entity)
@@ -170,6 +206,10 @@ script.on_event({defines.events.on_tick}, function(e)
 			vm_fix_all_drills()
 			vm_empty_all_destroyer_chests()
 		--end
+	end
+	
+	if e.tick % 100 == 0 then
+			vm_handle_player_indicator()
 	end
 end
 )

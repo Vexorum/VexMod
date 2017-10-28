@@ -69,6 +69,26 @@ data:extend({
 	
 	{
 		type = "technology",
+		name = "vex-ground-penetrating-radar",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vex-core-drilling-one"},
+		effects = {
+			{type = "unlock-recipe", recipe = "ground-penetrating-radar"}
+		},
+		unit = {
+			count = 1000,
+			ingredients = 
+			{
+				{"science-pack-1", 1},
+			},
+			time = 30
+		},
+		order = pf.."a-a",
+	},
+	
+	{
+		type = "technology",
 		name = "vex-core-drilling-two",
 		icon = F.."/graphics/technology/vex-core-drilling.png",
 		icon_size = 128,

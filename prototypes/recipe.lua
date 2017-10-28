@@ -403,6 +403,14 @@ data:extend({
 		subgroup = "production-machine",
 	},
  
+	{
+		type = "recipe",
+		name = "ground-penetrating-radar",
+		enabled = false,
+		energy_required = 30,
+		ingredients = {{"processing-unit", 15}, {"advanced-circuit", 1}, {"iron-plate", 1}},
+		result = "ground-penetrating-radar"
+	},
 });
 
 -- diamond, diamond drill, and destroyer chest
