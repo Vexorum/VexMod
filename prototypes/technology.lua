@@ -571,7 +571,7 @@ data:extend({
 			{type = "unlock-recipe", recipe = "vexium-plasma-turbine"},
 		},
 		unit = {
-			count = 50000,
+			count = 2500,
 			ingredients = 
 			{
 				{"science-pack-1", 7},
