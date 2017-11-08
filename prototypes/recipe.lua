@@ -519,7 +519,7 @@ data:extend({
 		name = "vexium-turret",
 		enabled = false,
 		energy_required = 1,
-		ingredients = {{"laser-turret", 3}, {"vexium-plate", 100}, {"electric-furnace", 10}},
+		ingredients = {{"laser-turret", 3}, {"vexium-plate", 20}, {"electric-furnace", 10}},
 		result = "vexium-turret"
 	},
 	
@@ -547,7 +547,7 @@ data:extend({
 		{
 		  {"vexium-cargo-wagon", 1},
 		  {"vexium-armor", 1},
-		  {"vexium-power-cell", 10}
+		  {"vexium-power-cell", 2}
 		},
 		result = "vexium-equipment-wagon"
 	},
@@ -584,9 +584,9 @@ data:extend({
 		energy_required = 3,
 		ingredients =
 		{
-		  {"vexium-plate", 300},
-		  {"plastic-bar", 200},
-		  {"steel-plate", 300},
+		  {"vexium-plate", 30},
+		  {"plastic-bar", 100},
+		  {"steel-plate", 100},
 		  {"battery", 100},
 		},
 		result = "vexium-power-frame"
@@ -635,7 +635,7 @@ data:extend({
 		name = "vexium-armor",
 		enabled = false,
 		energy_required = 25,
-		ingredients = {{ "power-armor-core", 10}, {"vexium-power-cell", 10}, {"vexium-plate", 1000}, {"iron-gear-wheel", 10000}},
+		ingredients = {{ "power-armor-core", 10}, {"vexium-power-cell", 2}, {"vexium-plate", 1000}, {"iron-gear-wheel", 10000}},
 		result = "vexium-armor",
 		requester_paste_multiplier = 1
 	},
@@ -686,13 +686,13 @@ data:extend({
 		enabled = false,
 		ingredients =
 		{
-		  {"diamond", 100},
-		  {"vexium-plate", 100},
-		  {"vexium-lamp", 100},
-		  {"vexium-cable", 100},
-		  {"steel-plate", 100},
-		  {"copper-plate", 100},
-		  {"plastic-bar", 100},
+		  {"diamond", 97},
+		  {"vexium-plate", 47},
+		  {"vexium-lamp", 4},
+		  {"vexium-cable", 67},
+		  {"steel-plate", 15},
+		  {"copper-plate", 15},
+		  {"plastic-bar", 10},
 		},
 		result = "vexium-subspace-frame"
 	},
@@ -701,7 +701,7 @@ data:extend({
 		name = "vexium-subspace-manufacturing-environment",
 		enabled = false,
 		energy_required = 1,
-		ingredients = {{"vexium-crafter", 10}, {"vexium-turret", 10}, {"vexium-cell-charger", 10}},
+		ingredients = {{"vexium-crafter", 7}, {"vexium-turret", 3}, {"vexium-cell-charger", 2}, {"vexium-power-cell", 1}},
 		result = "vexium-subspace-manufacturing-environment"
 	},
 });
@@ -796,9 +796,9 @@ data:extend({
 		enabled = false,
 		ingredients =
 		{
-			  {"steam-turbine", 1000},
-			  {"vexium-plate", 1000},
-			  {"heat-pipe", 1000},
+			  {"steam-turbine", 40},
+			  {"vexium-plate", 1200},
+			  {"heat-pipe", 920},
 		},
 		result = "vexium-plasma-turbine"
 	},
@@ -841,7 +841,7 @@ data:extend({
 		{
 		  {"roboport", 10},
 		  {"vexium-plate", 500},
-		  {"vexium-power-cell", 10},
+		  {"vexium-power-cell", 1},
 		  {"vexium-crafter", 10}
 		},
 		result = "vexium-roboport"

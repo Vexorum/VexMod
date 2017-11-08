@@ -3692,8 +3692,10 @@ data:extend({
 			percent = 80
 		  }
 		},
-		collision_box = {{-3.1, -3.0}, {2.6, 3.0}},
-		selection_box = {{-3.1, -3.0}, {2.6, 3.0}},
+		-- collision_box = {{-3.1, -3.0}, {2.6, 3.0}},
+		-- selection_box = {{-3.1, -3.0}, {2.6, 3.0}},
+		collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
+		selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 		module_specification =
 		{
 		  module_slots = 2,
@@ -3731,7 +3733,6 @@ data:extend({
 			height = 100,
 			frame_count = 1,
 			shift = {0.421875, 0},
-			scale = 2.0,
 			hr_version = {
 			  filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace.png",
 			  priority = "high",
@@ -3739,7 +3740,7 @@ data:extend({
 			  height = 219,
 			  frame_count = 1,
 			  shift = util.by_pixel(0.75, 5.75),
-			  scale = 1.0
+			  scale = 0.5
 			}
 		  },
 		  {
@@ -3749,7 +3750,6 @@ data:extend({
 			height = 100,
 			frame_count = 1,
 			shift = {0.421875, 0},
-			scale = 2.0,
 			draw_as_shadow = true,
 			hr_version = {
 			  filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace-shadow.png",
@@ -3759,7 +3759,7 @@ data:extend({
 			  frame_count = 1,
 			  draw_as_shadow = true,
 			  shift = util.by_pixel(11.25, 7.75),
-			  scale = 1.0
+			  scale = 0.5
 			}
 		  }
 		  }
@@ -3775,8 +3775,7 @@ data:extend({
 			  height = 15,
 			  frame_count = 12,
 			  animation_speed = 0.5,
-			  shift = {-0.1, 2},
-			  scale = 2.0,
+			  shift = {0.015625, 0.890625},
 			  hr_version = {
 				filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
 				priority = "high",
@@ -3785,12 +3784,55 @@ data:extend({
 				frame_count = 12,
 				animation_speed = 0.5,
 				shift = util.by_pixel(1.75, 32.75),
-				scale = 1.0
+				scale = 0.5
 			  }
 			},
 			light = {intensity = 0.4, size = 6, shift = {0.0, 1.0}, color = {r = 1.0, g = 1.0, b = 1.0}}
 		  },
-		  
+		  {
+			animation =
+			{
+			  filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
+			  priority = "high",
+			  width = 19,
+			  height = 13,
+			  frame_count = 4,
+			  animation_speed = 0.5,
+			  shift = {-0.671875, -0.640625},
+			  hr_version = {
+				filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-1.png",
+				priority = "high",
+				width = 37,
+				height = 25,
+				frame_count = 4,
+				animation_speed = 0.5,
+				shift = util.by_pixel(-20.5, -18.5),
+				scale = 0.5
+			  }
+			}
+		  },
+		  {
+			animation =
+			{
+			  filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-2.png",
+			  priority = "high",
+			  width = 12,
+			  height = 9,
+			  frame_count = 4,
+			  animation_speed = 0.5,
+			  shift = {0.0625, -1.234375},
+			  hr_version = {
+				filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-2.png",
+				priority = "high",
+				width = 23,
+				height = 15,
+				frame_count = 4,
+				animation_speed = 0.5,
+				shift = util.by_pixel(3.5, -38),
+				scale = 0.5
+			  }
+			}
+		  }
 		},
 		fast_replaceable_group = "furnace"
 	},
