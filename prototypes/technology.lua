@@ -586,4 +586,31 @@ data:extend({
 		},
 		order = pf.."a-a",
 	},
+	
+	{
+		type = "technology",
+		name = "vexium-matter-fabrication",
+		icon = F.."/graphics/technology/vex-core-drilling.png",
+		icon_size = 128,
+		prerequisites = {"vexium-sub-spacial-structures"},
+		effects = {
+			{type = "unlock-recipe", recipe = "matter-fabricator"},
+			{type = "unlock-recipe", recipe = "matter-plate"},
+		},
+		unit = {
+			count = 20000,
+			ingredients = 
+			{
+				{"science-pack-1", 2},
+				{"science-pack-2", 2},
+				{"science-pack-3", 2},
+				{"production-science-pack", 1},
+				{"military-science-pack", 1},
+				{"high-tech-science-pack", 1},
+				{"space-science-pack", 1},
+			},			
+			time = 60
+		},
+		order = pf.."a-a",
+	},
 })

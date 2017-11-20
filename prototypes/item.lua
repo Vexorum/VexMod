@@ -388,6 +388,27 @@ data:extend({
 		place_result = "super-lab",
 		stack_size = 10
 	},
+	
+	{
+	    type = "item",
+		name = "matter-plate",
+		icon = "__VexMod__/graphics/icons/matter-plate.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "raw-material",
+		order = "a[items]-b[iron-chest]",
+		stack_size = 200
+	},
+	
+	{
+		type = "item",
+		name = "matter-fabricator",
+		icon = "__VexMod__/graphics/icons/matter-fabricator.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "extraction-machine",
+		order = "a[items]-b[electric-mining-drill]",
+		place_result = "matter-fabricator",
+		stack_size = 10
+	},
 })
 
 

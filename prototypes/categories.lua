@@ -28,7 +28,11 @@ data:extend(
       type = "recipe-category",
       name = "vexium-subspace-energy-consume"
     },
-	
+	{
+      type = "recipe-category",
+      name = "matter-fabricator"
+    },
+		
 	
 	{
 		type = "fuel-category",

@@ -883,3 +883,24 @@ data:extend({
 		result = "super-lab"
 	},
 });
+
+-- extended endgame
+data:extend({
+	{
+		type = "recipe",
+		name = "matter-fabricator",
+		enabled = false,
+		energy_required = 1,
+		ingredients = {{"vexium-subspace-frame", 1}, {"vexium-plate", 2}, {"vexium-crafter", 1}},
+		result = "matter-fabricator"
+	},
+	{
+		type = "recipe",
+		name = "matter-plate",
+		category = "matter-fabricator",
+		enabled = false,
+		energy_required = 10,
+		ingredients = {{"vexium-plate", 1}},
+		results = {{"matter-plate", 1}},
+	},
+});
